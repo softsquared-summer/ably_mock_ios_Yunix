@@ -18,5 +18,6 @@ target 'ios' do
   
   pod 'PMSuperButton'
   pod 'SwipeMenuViewController'
+  pod 'Kingfisher'
 
 end

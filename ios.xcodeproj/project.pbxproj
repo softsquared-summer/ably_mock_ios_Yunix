@@ -34,6 +34,18 @@
 		C328252F247E1E3C004985EC /* FavoriteMarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C328252D247E1E3C004985EC /* FavoriteMarketViewController.xib */; };
 		C3539339247D82E900BA4443 /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3539338247D82E900BA4443 /* TapBarController.swift */; };
 		C353BAD6248055D500352649 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353BAD5248055D500352649 /* UIImage.swift */; };
+		C3AD262C2481345F0053EB85 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD262A2481345F0053EB85 /* TodayViewController.swift */; };
+		C3AD262D2481345F0053EB85 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AD262B2481345F0053EB85 /* TodayViewController.xib */; };
+		C3AD2634248134970053EB85 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD2632248134970053EB85 /* NewViewController.swift */; };
+		C3AD2635248134970053EB85 /* NewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AD2633248134970053EB85 /* NewViewController.xib */; };
+		C3AD263C248134DA0053EB85 /* HotDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD263A248134DA0053EB85 /* HotDealViewController.swift */; };
+		C3AD263D248134DA0053EB85 /* HotDealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AD263B248134DA0053EB85 /* HotDealViewController.xib */; };
+		C3AD2641248150410053EB85 /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD263F248150410053EB85 /* TodayCollectionViewCell.swift */; };
+		C3AD2642248150410053EB85 /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AD2640248150410053EB85 /* TodayCollectionViewCell.xib */; };
+		C3AD2646248155B10053EB85 /* RecommendedProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD2645248155B10053EB85 /* RecommendedProductResponse.swift */; };
+		C3AD2648248159E60053EB85 /* TodayDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD2647248159E60053EB85 /* TodayDataManager.swift */; };
+		C3AD264B248161860053EB85 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD2649248161860053EB85 /* BestViewController.swift */; };
+		C3AD264C248161860053EB85 /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3AD264A248161860053EB85 /* BestViewController.xib */; };
 		C3B8EAC9247D7919003A56FD /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8EAC7247D7919003A56FD /* MyPageViewController.swift */; };
 		C3B8EACA247D7919003A56FD /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B8EAC8247D7919003A56FD /* MyPageViewController.xib */; };
 		C3B8EAD3247D7EEA003A56FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8EAD1247D7EEA003A56FD /* HomeViewController.swift */; };
@@ -77,6 +89,18 @@
 		C328252D247E1E3C004985EC /* FavoriteMarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteMarketViewController.xib; sourceTree = "<group>"; };
 		C3539338247D82E900BA4443 /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		C353BAD5248055D500352649 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		C3AD262A2481345F0053EB85 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		C3AD262B2481345F0053EB85 /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		C3AD2632248134970053EB85 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		C3AD2633248134970053EB85 /* NewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewViewController.xib; sourceTree = "<group>"; };
+		C3AD263A248134DA0053EB85 /* HotDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDealViewController.swift; sourceTree = "<group>"; };
+		C3AD263B248134DA0053EB85 /* HotDealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotDealViewController.xib; sourceTree = "<group>"; };
+		C3AD263F248150410053EB85 /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3AD2640248150410053EB85 /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3AD2645248155B10053EB85 /* RecommendedProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedProductResponse.swift; sourceTree = "<group>"; };
+		C3AD2647248159E60053EB85 /* TodayDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDataManager.swift; sourceTree = "<group>"; };
+		C3AD2649248161860053EB85 /* BestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BestViewController.swift; path = ios/Best/BestViewController.swift; sourceTree = "<group>"; };
+		C3AD264A248161860053EB85 /* BestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BestViewController.xib; path = ios/Best/BestViewController.xib; sourceTree = "<group>"; };
 		C3B8EAC7247D7919003A56FD /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		C3B8EAC8247D7919003A56FD /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
 		C3B8EAD1247D7EEA003A56FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +278,71 @@
 			path = Market;
 			sourceTree = "<group>";
 		};
+		C3AD262E248134630053EB85 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				C3AD26442481557F0053EB85 /* Entity */,
+				C3AD2643248155760053EB85 /* DataManager */,
+				C3AD263E248150170053EB85 /* TodayCollectionViewCell */,
+				C3AD262A2481345F0053EB85 /* TodayViewController.swift */,
+				C3AD262B2481345F0053EB85 /* TodayViewController.xib */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		C3AD262F2481346F0053EB85 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				C3AD2632248134970053EB85 /* NewViewController.swift */,
+				C3AD2633248134970053EB85 /* NewViewController.xib */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		C3AD26302481347E0053EB85 /* Best */ = {
+			isa = PBXGroup;
+			children = (
+				C3AD2649248161860053EB85 /* BestViewController.swift */,
+				C3AD264A248161860053EB85 /* BestViewController.xib */,
+			);
+			name = Best;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C3AD2631248134810053EB85 /* HotDeal */ = {
+			isa = PBXGroup;
+			children = (
+				C3AD263A248134DA0053EB85 /* HotDealViewController.swift */,
+				C3AD263B248134DA0053EB85 /* HotDealViewController.xib */,
+			);
+			path = HotDeal;
+			sourceTree = "<group>";
+		};
+		C3AD263E248150170053EB85 /* TodayCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3AD263F248150410053EB85 /* TodayCollectionViewCell.swift */,
+				C3AD2640248150410053EB85 /* TodayCollectionViewCell.xib */,
+			);
+			path = TodayCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C3AD2643248155760053EB85 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3AD2647248159E60053EB85 /* TodayDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		C3AD26442481557F0053EB85 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C3AD2645248155B10053EB85 /* RecommendedProductResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		C3B8EAC2247D78DE003A56FD /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +355,10 @@
 		C3B8EACB247D7E85003A56FD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C3AD262E248134630053EB85 /* Today */,
+				C3AD262F2481346F0053EB85 /* New */,
+				C3AD26302481347E0053EB85 /* Best */,
+				C3AD2631248134810053EB85 /* HotDeal */,
 				C3B8EAD1247D7EEA003A56FD /* HomeViewController.swift */,
 				C3B8EAD2247D7EEA003A56FD /* HomeViewController.xib */,
 			);
@@ -364,13 +457,18 @@
 				C3B8EAD8247D7EF8003A56FD /* StyleViewController.xib in Resources */,
 				BDEF323C22F9B7CB00FEF8BD /* LaunchScreen.storyboard in Resources */,
 				BDEF323922F9B7CB00FEF8BD /* Assets.xcassets in Resources */,
+				C3AD262D2481345F0053EB85 /* TodayViewController.xib in Resources */,
+				C3AD264C248161860053EB85 /* BestViewController.xib in Resources */,
 				BD9BF18422F9D1A4009E47EB /* SplashViewController.xib in Resources */,
 				C3B8EADC247D7F06003A56FD /* MarketViewController.xib in Resources */,
 				BD9BF18822F9DCC7009E47EB /* MainViewController.xib in Resources */,
 				BD75ABDC2301B7B500E0FC7A /* NoticePopUp.storyboard in Resources */,
 				C328252B247E1E30004985EC /* FavoriteItemViewController.xib in Resources */,
+				C3AD2642248150410053EB85 /* TodayCollectionViewCell.xib in Resources */,
 				C328252F247E1E3C004985EC /* FavoriteMarketViewController.xib in Resources */,
+				C3AD263D248134DA0053EB85 /* HotDealViewController.xib in Resources */,
 				C3B8EAD4247D7EEA003A56FD /* HomeViewController.xib in Resources */,
+				C3AD2635248134970053EB85 /* NewViewController.xib in Resources */,
 				C3B8EAE0247D7F12003A56FD /* FavoriteViewController.xib in Resources */,
 				C3B8EACA247D7919003A56FD /* MyPageViewController.xib in Resources */,
 			);
@@ -425,15 +523,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AD264B248161860053EB85 /* BestViewController.swift in Sources */,
 				C328252A247E1E30004985EC /* FavoriteItemViewController.swift in Sources */,
 				C3B8EADB247D7F05003A56FD /* MarketViewController.swift in Sources */,
+				C3AD2646248155B10053EB85 /* RecommendedProductResponse.swift in Sources */,
+				C3AD263C248134DA0053EB85 /* HotDealViewController.swift in Sources */,
 				C3539339247D82E900BA4443 /* TapBarController.swift in Sources */,
 				C328252E247E1E3C004985EC /* FavoriteMarketViewController.swift in Sources */,
 				BDEF323722F9B7CB00FEF8BD /* ios.xcdatamodeld in Sources */,
 				BD9BF18722F9DCC7009E47EB /* MainViewController.swift in Sources */,
+				C3AD2648248159E60053EB85 /* TodayDataManager.swift in Sources */,
 				BD9BF17822F9C6CF009E47EB /* UIColor.swift in Sources */,
 				C3B8EAD3247D7EEA003A56FD /* HomeViewController.swift in Sources */,
 				BD9BF18022F9CDEF009E47EB /* String.swift in Sources */,
+				C3AD2634248134970053EB85 /* NewViewController.swift in Sources */,
 				C353BAD6248055D500352649 /* UIImage.swift in Sources */,
 				BD9BF17E22F9CD60009E47EB /* ColorPalette.swift in Sources */,
 				BD9BF17322F9C3D5009E47EB /* BaseViewController.swift in Sources */,
@@ -444,9 +547,11 @@
 				BD9BF17A22F9C6FF009E47EB /* UIButton.swift in Sources */,
 				C3B8EAD7247D7EF8003A56FD /* StyleViewController.swift in Sources */,
 				C3B8EADF247D7F12003A56FD /* FavoriteViewController.swift in Sources */,
+				C3AD2641248150410053EB85 /* TodayCollectionViewCell.swift in Sources */,
 				BD9BF17C22F9C737009E47EB /* UIViewController.swift in Sources */,
 				BD75ABE02301BE8200E0FC7A /* TutorialResponse.swift in Sources */,
 				BDEF322F22F9B7CB00FEF8BD /* AppDelegate.swift in Sources */,
+				C3AD262C2481345F0053EB85 /* TodayViewController.swift in Sources */,
 				BD75ABD82301B5F600E0FC7A /* NoticePopUp.swift in Sources */,
 				BD9BF18322F9D1A4009E47EB /* SplashViewController.swift in Sources */,
 			);
