@@ -98,7 +98,6 @@ class HomeViewController: BaseViewController {
 
 }
 
-
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         //

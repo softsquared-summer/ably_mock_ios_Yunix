@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
@@ -16,24 +17,48 @@ class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var productNameLabel: UILabel!
     @IBOutlet var countLabel: UILabel!
     @IBOutlet var hotDealLabel: UILabel!
-    @IBOutlet var newLabel: UILabel!
     
-    static let identifier: String = "TodayCollectionCell"
+    static let identifier: String = "TodayCollectionViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        hotDealLabel.layer.borderWidth = 1
+        print("1")
     }
     
     func updateUI(_ data: [RecommendedProductResponseResult], index: Int) {
+        let isHotDeal = data[index].isHotDeal == "N"
+        let isNotSale = data[index].sale == "0%"
+        let isCount = data[index].count == nil
+        
+        imageView.backgroundColor = .gray
         imageView.kf.setImage(with: URL(string: data[index].imgageUrl))
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 5
+        saleLabel.isHidden = isNotSale
         saleLabel.text = data[index].sale
         priceLabel.text = data[index].price
         marketLabel.text = data[index].marketName
         productNameLabel.text = data[index].productName
-        countLabel.text = data[index].count
-        hotDealLabel.isHidden = (data[index].isHotDeal == "N")
-        newLabel.isHidden = (data[index].isNew == "N")
+        
+        if isCount {
+            countLabel.text = "0개 구매중"
+        } else {
+            countLabel.text = data[index].count
+        }
+        
+        
+        hotDealLabel.isHidden = isHotDeal
+        
+//        if isHotDeal {
+//            hotDealLabel.snp.makeConstraints { (make) in
+//                make.width.equalTo(0)
+//            }
+//        } else {
+//            hotDealLabel.snp.makeConstraints { (make) in
+//                make.width.equalTo(42.5)
+//            }
+//        }
+
     }
 }

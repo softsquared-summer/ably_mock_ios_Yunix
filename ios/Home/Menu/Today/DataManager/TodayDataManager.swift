@@ -8,7 +8,6 @@
 
 import Alamofire
 import AlamofireObjectMapper
-import Kingfisher
 
 class TodayDataManager {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -23,6 +22,7 @@ class TodayDataManager {
                     if recommendedProductResponse.code == 100 {
                         print("정보를 불러오는데 성공했습니다.")
                         todayViewController.recommendData = recommendedProductResponse.result
+                        todayViewController.collectionView.reloadData()
                     } else {
                         print("정보를 불러오는데 실패하였습니다.")
                     }

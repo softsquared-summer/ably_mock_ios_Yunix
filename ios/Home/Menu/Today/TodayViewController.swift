@@ -23,7 +23,11 @@ class TodayViewController: BaseViewController {
         TodayDataManager().getRecommendedProduct(self)
     }
 
-
+    func moveProductInfoViewController(data: ProductInfoResponseResult) {
+        let nextViewController = ProductInfoViewController()
+        nextViewController.productInfoData = data
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
     /*
     // MARK: - Navigation
 
@@ -51,12 +55,7 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
-       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-           return 20
-       }
-
-       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           let width = (view.frame.width - 20*3) / 2
-           return CGSize(width: width, height: width)
-       }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        ProductInfoDataManager().getProductInfo(index: indexPath.row, todayViewController: self)
+    }
 }
