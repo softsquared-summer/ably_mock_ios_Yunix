@@ -60,6 +60,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let searchButton = UIBarButtonItem(image: UIImage.search?.resize(ratio: ratio2).withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
         let shoppingCarButton = UIBarButtonItem(image: UIImage.shoppingCar?.resize(ratio: ratio2).withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = UIColor(hex: 0x777777, alpha: 1)
+        
         self.navigationItem.rightBarButtonItems = [shoppingCarButton, searchButton]
     }
 

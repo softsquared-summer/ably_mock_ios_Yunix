@@ -20,7 +20,7 @@ class TodayDataManager {
                 switch response.result {
                 case .success(let recommendedProductResponse):
                     if recommendedProductResponse.code == 100 {
-                        print("정보를 불러오는데 성공했습니다.")
+                        print(recommendedProductResponse.message as Any)
                         todayViewController.recommendData = recommendedProductResponse.result
                         todayViewController.collectionView.reloadData()
                     } else {

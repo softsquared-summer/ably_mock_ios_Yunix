@@ -54,6 +54,9 @@
                             <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="pressedLogin:" destination="-1" eventType="touchUpInside" id="Qm7-cO-eod"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndX-sM-ALN" customClass="PMSuperButton" customModule="PMSuperButton">
                     <rect key="frame" x="263" y="30.5" width="92" height="42.5"/>
@@ -75,6 +78,9 @@
                             <real key="value" value="21.25"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="pressedRegister:" destination="-1" eventType="touchUpInside" id="Wd4-NF-wD7"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6p-MQ-M8d" customClass="PMSuperButton" customModule="PMSuperButton">
                     <rect key="frame" x="20" y="103" width="335" height="80"/>

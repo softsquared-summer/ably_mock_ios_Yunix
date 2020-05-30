@@ -20,7 +20,7 @@ class ProductInfoDataManager {
                 switch response.result {
                 case .success(let productInfoResponse):
                     if productInfoResponse.code == 100 {
-                        print("정보를 불러오는데 성공했습니다.")
+                        print(productInfoResponse.message as Any)
                         todayViewController.moveProductInfoViewController(data: productInfoResponse.result)
                     } else {
                         print("정보를 불러오는데 실패하였습니다.")

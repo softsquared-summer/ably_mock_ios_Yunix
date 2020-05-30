@@ -1,32 +1,38 @@
 //
-//  MyPageViewController.swift
+//  RegisterViewController.swift
 //  ios
 //
-//  Created by 이한길 on 2020/05/27.
+//  Created by 이한길 on 2020/05/31.
 //  Copyright © 2020 Jerry Jung. All rights reserved.
 //
 
 import UIKit
-import PMSuperButton
 
-class MyPageViewController: UIViewController {
-
+class RegisterViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "마이페이지"
+        navigationController?.navigationBar.isHidden = true
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
     }
 
-    @IBAction func pressedLogin(_ sender: PMSuperButton) {
+    @IBAction func pressedRegisterWithEmail(_ sender: Any) {
+        self.navigationController?.pushViewController(InputUserInfoViewController(), animated: true)
+    }
+    
+    @IBAction func pressedLoginWithEmail(_ sender: Any) {
         self.navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     
-    @IBAction func pressedRegister(_ sender: PMSuperButton) {
-        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+    @IBAction func pressedCancel(_ sender: Any) {
+        navigationController?.navigationBar.isHidden = false
+        self.navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation

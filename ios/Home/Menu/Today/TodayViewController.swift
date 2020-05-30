@@ -22,6 +22,14 @@ class TodayViewController: BaseViewController {
         
         TodayDataManager().getRecommendedProduct(self)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
 
     func moveProductInfoViewController(data: ProductInfoResponseResult) {
         let nextViewController = ProductInfoViewController()
