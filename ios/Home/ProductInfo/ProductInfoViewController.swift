@@ -24,6 +24,7 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet var marketHashTag: UILabel!
     
     var productInfoData: ProductInfoResponseResult?
+    var currentIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,18 @@ class ProductInfoViewController: UIViewController {
         ProductInfoDataManager().getProductInfo(index: index, todayViewController: todayViewController)
     }
 
-
+    @IBAction func pressedPurchase(_ sender: Any) {
+        let productOptionStoryboard = UIStoryboard(name: "ProductOption", bundle: Bundle.main)
+        guard let productOption = productOptionStoryboard
+            .instantiateViewController(withIdentifier: "ProductOption") as? ProductOptionViewController else {
+            return
+        }
+        productOption.modalPresentationStyle = .custom
+        productOption.modalTransitionStyle = .crossDissolve
+        productOption.currentIndex = currentIndex
+        self.present(productOption, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

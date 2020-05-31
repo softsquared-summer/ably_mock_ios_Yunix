@@ -28,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94o-i9-uhS">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="728"/>
                     <subviews>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="818" translatesAutoresizingMaskIntoConstraints="NO" id="gB4-rS-n1k">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
@@ -259,12 +259,71 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="3XS-Q6-zaB"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="5Y6-Qg-5Ll"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbi-Of-wiL" customClass="PMSuperButton" customModule="PMSuperButton">
+                    <rect key="frame" x="0.0" y="772" width="414" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-O9-86u">
+                            <rect key="frame" x="20" y="27" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TDg-O9-86u" secondAttribute="height" id="dCD-9R-44n"/>
+                            </constraints>
+                            <state key="normal" image="favoritePink"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61E-v0-zhx" customClass="PMSuperButton" customModule="PMSuperButton">
+                            <rect key="frame" x="76" y="15" width="318" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="구매하기">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="pressedPurchase:" destination="-1" eventType="touchUpInside" id="jFD-6M-Xfb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="TDg-O9-86u" firstAttribute="height" secondItem="61E-v0-zhx" secondAttribute="height" multiplier="0.6" id="1P2-sD-ra2"/>
+                        <constraint firstItem="61E-v0-zhx" firstAttribute="top" secondItem="Rbi-Of-wiL" secondAttribute="top" constant="15" id="49k-4R-d9J"/>
+                        <constraint firstItem="TDg-O9-86u" firstAttribute="centerY" secondItem="Rbi-Of-wiL" secondAttribute="centerY" id="74x-QW-vNi"/>
+                        <constraint firstItem="TDg-O9-86u" firstAttribute="leading" secondItem="Rbi-Of-wiL" secondAttribute="leading" constant="20" id="AyQ-nr-YGg"/>
+                        <constraint firstItem="61E-v0-zhx" firstAttribute="leading" secondItem="TDg-O9-86u" secondAttribute="trailing" constant="20" id="ZQb-Ho-nny"/>
+                        <constraint firstAttribute="bottom" secondItem="61E-v0-zhx" secondAttribute="bottom" constant="15" id="jfp-uM-wZQ"/>
+                        <constraint firstAttribute="height" constant="90" id="ncE-ck-qTq"/>
+                        <constraint firstAttribute="trailing" secondItem="61E-v0-zhx" secondAttribute="trailing" constant="20" id="zSU-Ts-Cjv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="-4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.20000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="94o-i9-uhS" secondAttribute="bottom" id="FEr-dh-xxd"/>
+                <constraint firstItem="Rbi-Of-wiL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2jR-jg-0wd"/>
+                <constraint firstItem="94o-i9-uhS" firstAttribute="bottom" secondItem="Rbi-Of-wiL" secondAttribute="top" id="EBK-vY-07V"/>
                 <constraint firstItem="MzW-ON-fuN" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.55" id="JFD-D1-w3n"/>
                 <constraint firstItem="94o-i9-uhS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OXl-7Z-6Gn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rbi-Of-wiL" secondAttribute="bottom" id="REh-m8-NL6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rbi-Of-wiL" secondAttribute="trailing" id="gY0-XF-4wF"/>
                 <constraint firstItem="94o-i9-uhS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ohb-x2-q14"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="94o-i9-uhS" secondAttribute="trailing" id="tL5-Rv-KqD"/>
             </constraints>
@@ -272,4 +331,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="81.696428571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="favoritePink" width="51" height="48"/>
+    </resources>
 </document>

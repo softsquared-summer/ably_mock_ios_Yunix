@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedSecondOptionViewController" customModule="에이블리" customModuleProvider="target">
+            <connections>
+                <outlet property="firstOptionLabel" destination="1Be-1H-uK7" id="yC8-KE-eUh"/>
+                <outlet property="tableView" destination="nuK-Ua-AbD" id="6Da-lD-Oqj"/>
+                <outlet property="view" destination="eUs-ml-FOx" id="CgL-DF-GZ5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eUs-ml-FOx">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUf-G8-wWP" customClass="PMSuperButton" customModule="PMSuperButton">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="DeY-5p-uzG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="pressedFirstOption:" destination="-1" eventType="touchUpInside" id="0jZ-7h-Uj7"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옵션1을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Be-1H-uK7">
+                    <rect key="frame" x="20" y="59" width="136.5" height="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xba-2g-iEV" customClass="PMSuperButton" customModule="PMSuperButton">
+                    <rect key="frame" x="0.0" y="114" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Rk3-WJ-Oyq"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="pressedSecondOption:" destination="-1" eventType="touchUpInside" id="Gsd-r9-ZwC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옵션2을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-eP-6ZW">
+                    <rect key="frame" x="20" y="129" width="138.5" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nuK-Ua-AbD">
+                    <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="yiG-Kl-opb" firstAttribute="leading" secondItem="AUf-G8-wWP" secondAttribute="leading" id="4Mo-A5-NCP"/>
+                <constraint firstItem="yiG-Kl-opb" firstAttribute="trailing" secondItem="Xba-2g-iEV" secondAttribute="trailing" id="5yC-Bl-VbF"/>
+                <constraint firstItem="7pf-eP-6ZW" firstAttribute="leading" secondItem="Xba-2g-iEV" secondAttribute="leading" constant="20" id="Abp-FZ-R5s"/>
+                <constraint firstItem="Xba-2g-iEV" firstAttribute="top" secondItem="AUf-G8-wWP" secondAttribute="bottom" constant="20" id="C9C-xb-ekf"/>
+                <constraint firstItem="1Be-1H-uK7" firstAttribute="leading" secondItem="AUf-G8-wWP" secondAttribute="leading" constant="20" id="MQE-Uh-2xx"/>
+                <constraint firstItem="yiG-Kl-opb" firstAttribute="trailing" secondItem="AUf-G8-wWP" secondAttribute="trailing" id="P1C-OG-Cpn"/>
+                <constraint firstItem="yiG-Kl-opb" firstAttribute="trailing" secondItem="nuK-Ua-AbD" secondAttribute="trailing" id="Ulk-iU-Ckp"/>
+                <constraint firstItem="AUf-G8-wWP" firstAttribute="top" secondItem="yiG-Kl-opb" secondAttribute="top" id="cGe-Gj-nyQ"/>
+                <constraint firstItem="yiG-Kl-opb" firstAttribute="bottom" secondItem="nuK-Ua-AbD" secondAttribute="bottom" id="eVg-Iy-WLS"/>
+                <constraint firstItem="7pf-eP-6ZW" firstAttribute="centerY" secondItem="Xba-2g-iEV" secondAttribute="centerY" id="fwq-Qz-4AB"/>
+                <constraint firstItem="nuK-Ua-AbD" firstAttribute="leading" secondItem="yiG-Kl-opb" secondAttribute="leading" id="nU3-ji-Aen"/>
+                <constraint firstItem="nuK-Ua-AbD" firstAttribute="top" secondItem="Xba-2g-iEV" secondAttribute="bottom" id="nyf-ho-9wH"/>
+                <constraint firstItem="1Be-1H-uK7" firstAttribute="centerY" secondItem="AUf-G8-wWP" secondAttribute="centerY" id="sFF-2i-mcc"/>
+                <constraint firstItem="yiG-Kl-opb" firstAttribute="leading" secondItem="Xba-2g-iEV" secondAttribute="leading" id="zM5-2k-9HL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="yiG-Kl-opb"/>
+            <point key="canvasLocation" x="131.8840579710145" y="91.741071428571431"/>
+        </view>
+    </objects>
+</document>

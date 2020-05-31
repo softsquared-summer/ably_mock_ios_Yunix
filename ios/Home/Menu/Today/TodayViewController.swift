@@ -31,9 +31,10 @@ class TodayViewController: BaseViewController {
         navigationController?.navigationBar.isHidden = false
     }
 
-    func moveProductInfoViewController(data: ProductInfoResponseResult) {
+    func moveProductInfoViewController(data: ProductInfoResponseResult, index: Int) {
         let nextViewController = ProductInfoViewController()
         nextViewController.productInfoData = data
+        nextViewController.currentIndex = index
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     /*
@@ -64,6 +65,6 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        ProductInfoDataManager().getProductInfo(index: indexPath.row, todayViewController: self)
+        ProductInfoDataManager().getProductInfo(index: indexPath.row + 1, todayViewController: self)
     }
 }
