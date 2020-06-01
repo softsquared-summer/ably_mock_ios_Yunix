@@ -39,6 +39,12 @@
                         <action selector="pressedFirstOption:" destination="-1" eventType="touchUpInside" id="YtP-Qq-EUf"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="QEf-Ac-JMG">
+                    <rect key="frame" x="375.5" y="64" width="18.5" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QEf-Ac-JMG" secondAttribute="height" multiplier="15:8" id="sHm-4f-OPQ"/>
+                    </constraints>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옵션1을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-CP-k0o">
                     <rect key="frame" x="20" y="59" width="136.5" height="20"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
@@ -65,6 +71,9 @@
                         <action selector="pressedSecondOption:" destination="-1" eventType="touchUpInside" id="Bxr-Yr-9E7"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="6KT-1L-vK5">
+                    <rect key="frame" x="375.5" y="134" width="18.5" height="10"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옵션2을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6c-3N-xTW">
                     <rect key="frame" x="20" y="129" width="138.5" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -75,18 +84,28 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="a7a-CP-k0o" firstAttribute="leading" secondItem="G5V-Yw-mz1" secondAttribute="leading" constant="20" id="3XL-HA-Shf"/>
+                <constraint firstItem="QEf-Ac-JMG" firstAttribute="top" secondItem="G5V-Yw-mz1" secondAttribute="top" constant="20" id="7JT-2Q-tUS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="G5V-Yw-mz1" secondAttribute="leading" id="FfB-ef-d08"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9TU-Jw-Sor" secondAttribute="trailing" id="Gsu-Q2-kfF"/>
+                <constraint firstItem="QEf-Ac-JMG" firstAttribute="bottom" secondItem="G5V-Yw-mz1" secondAttribute="bottom" constant="-20" id="IaX-p0-68Z"/>
                 <constraint firstItem="O6c-3N-xTW" firstAttribute="centerY" secondItem="9TU-Jw-Sor" secondAttribute="centerY" id="QOd-aR-6DN"/>
+                <constraint firstItem="6KT-1L-vK5" firstAttribute="top" secondItem="9TU-Jw-Sor" secondAttribute="top" constant="20" id="Rau-gg-CLn"/>
                 <constraint firstItem="O6c-3N-xTW" firstAttribute="leading" secondItem="9TU-Jw-Sor" secondAttribute="leading" constant="20" id="UH8-pS-m1X"/>
+                <constraint firstItem="6KT-1L-vK5" firstAttribute="bottom" secondItem="9TU-Jw-Sor" secondAttribute="bottom" constant="-20" id="Y6h-ca-OZJ"/>
+                <constraint firstItem="QEf-Ac-JMG" firstAttribute="trailing" secondItem="G5V-Yw-mz1" secondAttribute="trailing" constant="-20" id="cSM-U2-LUx"/>
+                <constraint firstItem="6KT-1L-vK5" firstAttribute="width" secondItem="6KT-1L-vK5" secondAttribute="height" multiplier="15:8" id="eK2-AV-oDf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="9TU-Jw-Sor" secondAttribute="leading" id="pUW-MP-LvO"/>
                 <constraint firstItem="a7a-CP-k0o" firstAttribute="centerY" secondItem="G5V-Yw-mz1" secondAttribute="centerY" id="prN-se-zyF"/>
                 <constraint firstItem="9TU-Jw-Sor" firstAttribute="top" secondItem="G5V-Yw-mz1" secondAttribute="bottom" constant="20" id="sBt-W8-IcW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G5V-Yw-mz1" secondAttribute="trailing" id="tXN-af-BMn"/>
                 <constraint firstItem="G5V-Yw-mz1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="u8q-g1-PW6"/>
+                <constraint firstItem="6KT-1L-vK5" firstAttribute="trailing" secondItem="9TU-Jw-Sor" secondAttribute="trailing" constant="-20" id="vMs-U3-aU0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="91.741071428571431"/>
         </view>
     </objects>
+    <resources>
+        <image name="Close" width="30" height="19"/>
+    </resources>
 </document>

@@ -21,11 +21,12 @@ class SelectedFirstOptionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        tableView.bounces = false
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
         let firstOptionNib = UINib(nibName: FirstOptionTableViewCell.identifier, bundle: nil)
         tableView.register(firstOptionNib, forCellReuseIdentifier: FirstOptionTableViewCell.identifier)
     }
@@ -85,6 +86,8 @@ extension SelectedFirstOptionViewController: UITableViewDelegate, UITableViewDat
                     return UITableViewCell()
                 }
         
+        cell.contentView.layer.borderWidth = 0.5
+        cell.contentView.layer.borderColor = UIColor(hex: 0xC7C7CC, alpha: 1).cgColor
         cell.tableView = self
         cell.updateUI(firstOptionList[indexPath.row], indexPath.row)
                 

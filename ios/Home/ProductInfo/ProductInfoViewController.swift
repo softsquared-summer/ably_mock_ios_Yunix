@@ -8,11 +8,12 @@
 
 import UIKit
 import Kingfisher
+import SnapKit
 
 class ProductInfoViewController: UIViewController {
 
-    @IBOutlet var imageScrolleView: UIScrollView!
     @IBOutlet var imagePageControl: UIPageControl!
+    @IBOutlet var contentView: UIView!
     
     @IBOutlet var productNameLabel: UILabel!
     @IBOutlet var discountLabel: UILabel!
@@ -22,46 +23,77 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet var marketImage: UIImageView!
     @IBOutlet var marketName: UILabel!
     @IBOutlet var marketHashTag: UILabel!
+    @IBOutlet var couponLabel: UILabel!
     
+    @IBOutlet var saleConstraint: NSLayoutConstraint!
+    @IBOutlet var saleLine: UIView!
+    
+    var index: Int!
     var productInfoData: ProductInfoResponseResult?
     var currentIndex: Int!
+    var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem?.title = nil
         
-        let index = productInfoData?.normalImgUrlList.count
+        self.index = productInfoData?.normalImgUrlList.count
         var i = 0
+        
+        scrollView = UIScrollView(frame: contentView.bounds)
+        scrollView.delegate = self
         
         while i < index! {
             let subView = UIImageView()
             subView.kf.setImage(with: URL(string: (productInfoData?.normalImgUrlList[i])!))
-            subView.frame = UIScreen.main.bounds
+            subView.frame = contentView.bounds
             subView.frame.origin.x = UIScreen.main.bounds.width * CGFloat(i)
-            imageScrolleView.addSubview(subView)
+            scrollView.addSubview(subView)
             i += 1
         }
         
-        imageScrolleView.isPagingEnabled = true
-        
-        imageScrolleView.contentSize.width = UIScreen.main.bounds.width * CGFloat(index!)
-        
-        imageScrolleView.alwaysBounceVertical = false
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.isPagingEnabled = true
+        scrollView.contentSize.width = UIScreen.main.bounds.width * CGFloat(index!)
+        scrollView.contentSize.height = contentView.frame.size.height
+        scrollView.alwaysBounceHorizontal = false
+        scrollView.bounces = false
         
         imagePageControl.numberOfPages = index!
-        
-        imagePageControl.layer.zPosition = imageScrolleView.layer.zPosition + 1
+        imagePageControl.layer.zPosition = contentView.layer.zPosition + 1
         
         productNameLabel.text = productInfoData?.productName
-        discountLabel.text = productInfoData?.discountRatio
+        
+        if productInfoData?.discountRatio == "0%" {
+            discountLabel.text = ""
+            couponLabel.text = "2000원"
+            saleConstraint.constant = 0
+            originalPrice.text = ""
+            saleLine.isHidden = true
+        } else {
+            couponLabel.text = productInfoData?.discountRatio
+            discountLabel.text = productInfoData?.discountRatio
+            saleConstraint.constant = 10
+            originalPrice.text = productInfoData?.price
+            saleLine.isHidden = false
+        }
+        
         displayPrice.text = productInfoData?.displayedPrice
-        originalPrice.text = productInfoData?.price
         
         marketImage.kf.setImage(with: URL(string: (productInfoData?.marketThumbnailUrl)!))
         marketImage.contentMode = .scaleToFill
         marketImage.layer.cornerRadius = 20
         marketName.text = productInfoData?.marketName
         marketHashTag.text = productInfoData?.marketHashTags
+        
+        contentView.addSubview(scrollView)
+
+        scrollView.snp.makeConstraints({ (make) in
+            make.top.equalTo(contentView.snp.top)
+            make.bottom.equalTo(contentView.snp.bottom)
+            make.leading.equalTo(contentView.snp.leading)
+            make.trailing.equalTo(contentView.snp.trailing)
+        })
     }
     
     func recieveInfo(_ index: Int, _ todayViewController: TodayViewController) {
@@ -96,6 +128,6 @@ extension ProductInfoViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // floor 내림, ceil 올림
         // contentOffset는 현재 스크롤된 좌표
-        imagePageControl.currentPage = Int(floor(imageScrolleView.contentOffset.x / UIScreen.main.bounds.width))
+        imagePageControl.currentPage = Int(floor(scrollView.contentOffset.x / UIScreen.main.bounds.width))
     }
 }

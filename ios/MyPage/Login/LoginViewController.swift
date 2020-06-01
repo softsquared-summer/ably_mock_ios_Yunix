@@ -34,10 +34,30 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func pressedLogin(_ sender: Any) {
-        let header: HTTPHeaders = ["userType" : "NORMAL",
-                                   "email" : emailTextfield.text!,
-                                   "password" : passwordTextfield.text!]
-        LoginDataManager().postLogin(self, header)
+       let parameters: Parameters = Parameters(dictionaryLiteral: ("userType", "NORMAL"),
+        ("email", emailTextfield.text!),
+        ("password", passwordTextfield.text!))
+        LoginDataManager().postLogin(self, parameters)
+    }
+    
+    func loginSuccess() {
+        let alert = UIAlertController(title: "로그인 성공", message: "안녕하세요 \(String(UserDefaults.standard.string(forKey: "USER_NAME")!))님", preferredStyle: .alert)
+        let actionOkay = UIAlertAction(title: "확인", style: .default) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(actionOkay)
+
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func loginFailed(failedMessage: String!) {
+        let alert = UIAlertController(title: failedMessage, message: nil, preferredStyle: .alert)
+        let actionOkay = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        alert.addAction(actionOkay)
+
+        present(alert, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

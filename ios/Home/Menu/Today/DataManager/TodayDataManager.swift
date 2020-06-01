@@ -28,6 +28,12 @@ class TodayDataManager {
                     }
                 case .failure:
                     print("서버와의 연결이 원활하지 않습니다.")
+                    let alert = UIAlertController(title: "서버와의 연결이 원활하지 않습니다.", message: nil, preferredStyle: .alert)
+                    let actionOkay = UIAlertAction(title: "확인", style: .default, handler: nil)
+                    
+                    alert.addAction(actionOkay)
+
+                    todayViewController.present(alert, animated: true, completion: nil)
                 }
             })
     }

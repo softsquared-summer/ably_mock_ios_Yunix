@@ -20,7 +20,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let ratio: CGFloat = 0.4
         
-        let item1 = TodayViewController()
+        let item1 = HomeViewController()
         let icon1 = UITabBarItem(title: "홈", image: UIImage.homeGray?.resize(ratio: ratio), selectedImage: UIImage.homePink?.resize(ratio: ratio))
         icon1.titlePositionAdjustment.vertical = -5
         item1.tabBarItem = icon1

@@ -40,6 +40,12 @@
                         <action selector="pressedFirstOption:" destination="-1" eventType="touchUpInside" id="0jZ-7h-Uj7"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="5F9-qW-XhQ">
+                    <rect key="frame" x="375.5" y="64" width="18.5" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="5F9-qW-XhQ" secondAttribute="height" multiplier="15:8" id="rqj-JZ-ohe"/>
+                    </constraints>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옵션1을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Be-1H-uK7">
                     <rect key="frame" x="20" y="59" width="136.5" height="20"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
@@ -66,6 +72,12 @@
                         <action selector="pressedSecondOption:" destination="-1" eventType="touchUpInside" id="Gsd-r9-ZwC"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Open" translatesAutoresizingMaskIntoConstraints="NO" id="yDH-Ta-pan">
+                    <rect key="frame" x="375.5" y="134" width="18.5" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="yDH-Ta-pan" secondAttribute="height" multiplier="15:8" id="Sfd-1t-3f5"/>
+                    </constraints>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옵션2을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-eP-6ZW">
                     <rect key="frame" x="20" y="129" width="138.5" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -84,18 +96,28 @@
                 <constraint firstItem="7pf-eP-6ZW" firstAttribute="leading" secondItem="Xba-2g-iEV" secondAttribute="leading" constant="20" id="Abp-FZ-R5s"/>
                 <constraint firstItem="Xba-2g-iEV" firstAttribute="top" secondItem="AUf-G8-wWP" secondAttribute="bottom" constant="20" id="C9C-xb-ekf"/>
                 <constraint firstItem="1Be-1H-uK7" firstAttribute="leading" secondItem="AUf-G8-wWP" secondAttribute="leading" constant="20" id="MQE-Uh-2xx"/>
+                <constraint firstItem="5F9-qW-XhQ" firstAttribute="bottom" secondItem="AUf-G8-wWP" secondAttribute="bottom" constant="-20" id="N01-Jv-Odh"/>
+                <constraint firstItem="yDH-Ta-pan" firstAttribute="top" secondItem="Xba-2g-iEV" secondAttribute="top" constant="20" id="OtP-tv-VAY"/>
                 <constraint firstItem="yiG-Kl-opb" firstAttribute="trailing" secondItem="AUf-G8-wWP" secondAttribute="trailing" id="P1C-OG-Cpn"/>
                 <constraint firstItem="yiG-Kl-opb" firstAttribute="trailing" secondItem="nuK-Ua-AbD" secondAttribute="trailing" id="Ulk-iU-Ckp"/>
+                <constraint firstItem="5F9-qW-XhQ" firstAttribute="trailing" secondItem="AUf-G8-wWP" secondAttribute="trailing" constant="-20" id="Vyo-i7-nK2"/>
+                <constraint firstItem="yDH-Ta-pan" firstAttribute="bottom" secondItem="Xba-2g-iEV" secondAttribute="bottom" constant="-20" id="bwn-2w-YpO"/>
                 <constraint firstItem="AUf-G8-wWP" firstAttribute="top" secondItem="yiG-Kl-opb" secondAttribute="top" id="cGe-Gj-nyQ"/>
+                <constraint firstItem="yDH-Ta-pan" firstAttribute="trailing" secondItem="Xba-2g-iEV" secondAttribute="trailing" constant="-20" id="dPR-gj-nDD"/>
                 <constraint firstItem="yiG-Kl-opb" firstAttribute="bottom" secondItem="nuK-Ua-AbD" secondAttribute="bottom" id="eVg-Iy-WLS"/>
                 <constraint firstItem="7pf-eP-6ZW" firstAttribute="centerY" secondItem="Xba-2g-iEV" secondAttribute="centerY" id="fwq-Qz-4AB"/>
                 <constraint firstItem="nuK-Ua-AbD" firstAttribute="leading" secondItem="yiG-Kl-opb" secondAttribute="leading" id="nU3-ji-Aen"/>
                 <constraint firstItem="nuK-Ua-AbD" firstAttribute="top" secondItem="Xba-2g-iEV" secondAttribute="bottom" id="nyf-ho-9wH"/>
                 <constraint firstItem="1Be-1H-uK7" firstAttribute="centerY" secondItem="AUf-G8-wWP" secondAttribute="centerY" id="sFF-2i-mcc"/>
+                <constraint firstItem="5F9-qW-XhQ" firstAttribute="top" secondItem="AUf-G8-wWP" secondAttribute="top" constant="20" id="uqx-03-Gc1"/>
                 <constraint firstItem="yiG-Kl-opb" firstAttribute="leading" secondItem="Xba-2g-iEV" secondAttribute="leading" id="zM5-2k-9HL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="yiG-Kl-opb"/>
             <point key="canvasLocation" x="131.8840579710145" y="91.741071428571431"/>
         </view>
     </objects>
+    <resources>
+        <image name="Close" width="30" height="19"/>
+        <image name="Open" width="30" height="19"/>
+    </resources>
 </document>

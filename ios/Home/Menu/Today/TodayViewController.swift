@@ -11,16 +11,21 @@ import UIKit
 class TodayViewController: BaseViewController {
     
     var recommendData: [RecommendedProductResponseResult]?
+    var rootViewController: HomeViewController!
+    var isScrolling: Bool = false
     
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
         let todayCellNib = UINib(nibName: TodayCollectionViewCell.identifier, bundle: nil)
         collectionView.register(todayCellNib, forCellWithReuseIdentifier: TodayCollectionViewCell.identifier)
         
-        TodayDataManager().getRecommendedProduct(self)
+//        TodayDataManager().getRecommendedProduct(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,12 +35,12 @@ class TodayViewController: BaseViewController {
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
-
+    
     func moveProductInfoViewController(data: ProductInfoResponseResult, index: Int) {
         let nextViewController = ProductInfoViewController()
         nextViewController.productInfoData = data
         nextViewController.currentIndex = index
-        self.navigationController?.pushViewController(nextViewController, animated: true)
+        rootViewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
     /*
     // MARK: - Navigation
@@ -55,6 +60,7 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayCollectionViewCell.identifier, for: indexPath) as? TodayCollectionViewCell else {
             return UICollectionViewCell()
         }
@@ -67,4 +73,5 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         ProductInfoDataManager().getProductInfo(index: indexPath.row + 1, todayViewController: self)
     }
+    
 }

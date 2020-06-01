@@ -16,10 +16,14 @@ class HomeViewController: BaseViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     let searchBar = UISearchBar()
+    
+    var todayViewController: TodayViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        todayViewController = TodayViewController()
+        
        menuView.dataSource = self
        menuView.delegate = self
 
@@ -29,7 +33,7 @@ class HomeViewController: BaseViewController {
 
        options.tabView.margin = 10
 
-       options.tabView.itemView.margin = 10
+       options.tabView.itemView.margin = 25
 
        options.tabView.itemView.font = UIFont.boldSystemFont(ofSize: 16)
 
@@ -75,8 +79,6 @@ class HomeViewController: BaseViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("D")
-        
         self.navigationController?.navigationBar.topItem?.titleView = nil
         
         let searchButton = UIBarButtonItem(image: UIImage.search?.resize(ratio: 0.4).withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
@@ -131,7 +133,7 @@ extension HomeViewController: SwipeMenuViewDelegate, SwipeMenuViewDataSource {
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
         switch index {
         case 0:
-            return TodayViewController()
+            return todayViewController
         case 1:
             return NewViewController()
         case 2:
@@ -140,6 +142,13 @@ extension HomeViewController: SwipeMenuViewDelegate, SwipeMenuViewDataSource {
             return HotDealViewController()
         default:
             return TodayViewController()
+        }
+    }
+    
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewWillSetupAt currentIndex: Int) {
+        if currentIndex == 0 {
+            todayViewController.rootViewController = self
+            TodayDataManager().getRecommendedProduct(todayViewController)
         }
     }
 }

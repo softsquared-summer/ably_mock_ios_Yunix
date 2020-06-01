@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class InputUserInfoViewController: UIViewController {
+class InputUserInfoViewController: BaseViewController {
 
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
@@ -117,17 +117,42 @@ class InputUserInfoViewController: UIViewController {
     }
     
     @IBAction func pressedRegister(_ sender: Any) {
-        let header: HTTPHeaders = ["userType" : "NORMAL",
-                                   "email" : emailTextfield.text!,
-                                   "password" : passwordTextfield.text!,
-                                   "name" : nameTextfield.text!,
-                                   "phone" : phoneNumberTextfield.text!,
-                                   "dateOfBirth" : date,
-                                   "AgreeOnService" : isServiceCheck ? "Y" : "N",
-                                   "AgreeOnPrivate" : isPrivateCheck ? "Y" : "N" ]
-        RegisterDataManager().postRegister(self, header)
+        if date == nil {
+            date = ""
+        }
+        
+        let parameters: Parameters = Parameters(dictionaryLiteral: ("userType", "NORMAL"),
+                                                ("email", emailTextfield.text!),
+                                                ("password", passwordTextfield.text!),
+                                                ("name", nameTextfield.text!),
+                                                ("phone", phoneNumberTextfield.text!),
+                                                ("dateOfBirth", date!),
+                                                ("AgreeOnService", isServiceCheck ? "Y" : "N"),
+                                                ("AgreeOnPrivate", isPrivateCheck ? "Y" : "N"))
+        print(parameters)
+        RegisterDataManager().postRegister(self, parameters)
     }
     
+    func registerSuccess() {
+        navigationController?.navigationBar.isHidden = false
+        let alert = UIAlertController(title: "회원가입 성공", message: nil, preferredStyle: .alert)
+        let actionOkay = UIAlertAction(title: "확인", style: .default) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(actionOkay)
+
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func registerFailed(failedMessage : String!) {
+        let alert = UIAlertController(title: failedMessage, message: nil, preferredStyle: .alert)
+        let actionOkay = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        alert.addAction(actionOkay)
+
+        present(alert, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

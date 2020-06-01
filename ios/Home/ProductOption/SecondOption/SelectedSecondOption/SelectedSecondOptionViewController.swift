@@ -26,6 +26,8 @@ class SelectedSecondOptionViewController: UIViewController {
         firstOptionLabel.text = firstOptionList[index]
 
         // Do any additional setup after loading the view.
+        tableView.bounces = false
+        tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -89,9 +91,15 @@ extension SelectedSecondOptionViewController: UITableViewDataSource, UITableView
                     return UITableViewCell()
         }
         
+        cell.contentView.layer.borderWidth = 0.5
+        cell.contentView.layer.borderColor = UIColor(hex: 0xC7C7CC, alpha: 1).cgColor
         cell.updateUI(secondOption: secondOptionList[indexPath.row], price: data[indexPath.row].detailedPrice)
                 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

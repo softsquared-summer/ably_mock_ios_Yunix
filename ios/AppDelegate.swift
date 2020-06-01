@@ -16,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    // Production 서버
-//    let baseUrl = "https://beluv.softsquared.com"
-    // Dev 서버
     let baseUrl = "http://3.34.80.36"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

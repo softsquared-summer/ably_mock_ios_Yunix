@@ -31,7 +31,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Jk5-Gs-0AN">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="892.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="882"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qaB-no-vRe">
                                     <rect key="frame" x="30" y="50" width="354" height="58"/>
@@ -138,7 +138,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-iv-OJZ" customClass="PMSuperButton" customModule="PMSuperButton">
-                                    <rect key="frame" x="20" y="570" width="374" height="222.5"/>
+                                    <rect key="frame" x="20" y="570" width="374" height="212"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-TG-xav" customClass="PMSuperButton" customModule="PMSuperButton">
                                             <rect key="frame" x="20" y="20" width="20" height="20"/>
@@ -162,20 +162,20 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약관 전체동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEc-wk-8et">
-                                            <rect key="frame" x="55" y="19.5" width="98" height="21"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <rect key="frame" x="55" y="21" width="81.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LoH-ep-qRB">
-                                            <rect key="frame" x="0.0" y="60.5" width="374" height="1"/>
+                                            <rect key="frame" x="0.0" y="59" width="374" height="1"/>
                                             <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="YqT-O3-coH"/>
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-ce-X4I" customClass="PMSuperButton" customModule="PMSuperButton">
-                                            <rect key="frame" x="20" y="81.5" width="20" height="20"/>
+                                            <rect key="frame" x="20" y="80" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="wVW-LL-Hr6"/>
                                             </constraints>
@@ -195,19 +195,19 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용약관에 동의합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fK-dE-Fx6">
-                                            <rect key="frame" x="55" y="82" width="147.5" height="19.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <rect key="frame" x="55" y="82" width="120" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용약관에는 마케팅 정보 수신에 대한 동의와 관련된 내용이 포하되어 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x2-t3-0Uo">
-                                            <rect key="frame" x="55" y="121.5" width="299" height="36"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                            <rect key="frame" x="55" y="118" width="299" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgy-kQ-sLI" customClass="PMSuperButton" customModule="PMSuperButton">
-                                            <rect key="frame" x="20" y="177.5" width="20" height="20"/>
+                                            <rect key="frame" x="20" y="167" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="VbE-FS-Pqb"/>
                                             </constraints>
@@ -227,19 +227,19 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집 및 이용에 동의합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txK-k5-BbT">
-                                            <rect key="frame" x="55" y="177.5" width="229" height="19.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <rect key="frame" x="55" y="169" width="187" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d33-AR-SWC">
-                                            <rect key="frame" x="217.5" y="76.5" width="52" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <rect key="frame" x="190" y="76.5" width="42" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="본문보기"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xng-lT-yGA">
-                                            <rect key="frame" x="299" y="172.5" width="52" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <rect key="frame" x="257" y="163.5" width="42" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="본문보기"/>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ugX-hN-snJ">
@@ -250,14 +250,14 @@
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IX3-Im-yF3">
-                                            <rect key="frame" x="20" y="81.5" width="20" height="20"/>
+                                            <rect key="frame" x="20" y="80" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="IX3-Im-yF3" secondAttribute="height" id="c95-Yz-37p"/>
                                                 <constraint firstAttribute="height" constant="20" id="hac-PB-hvd"/>
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wDM-KL-4d6">
-                                            <rect key="frame" x="20" y="177.5" width="20" height="20"/>
+                                            <rect key="frame" x="20" y="167" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="wDM-KL-4d6" secondAttribute="height" id="NgX-t5-faA"/>
                                                 <constraint firstAttribute="height" constant="20" id="T4K-q3-w9f"/>
@@ -311,7 +311,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS6-WC-r3g" customClass="PMSuperButton" customModule="PMSuperButton">
-                                    <rect key="frame" x="20" y="812.5" width="374" height="55"/>
+                                    <rect key="frame" x="20" y="802" width="374" height="55"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="55" id="BU2-qD-vL7"/>

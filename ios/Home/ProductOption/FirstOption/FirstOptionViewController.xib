@@ -50,6 +50,12 @@
                     <color key="textColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-SQ-u9O">
+                    <rect key="frame" x="375.5" y="64" width="18.5" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="vgN-SQ-u9O" secondAttribute="height" multiplier="15:8" id="Je9-9o-yCN"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -57,14 +63,20 @@
                 <constraint firstItem="bL2-ZI-8YH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FR1-Lc-0Z6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f7o-9s-mUm" secondAttribute="trailing" id="TJv-Eq-be6"/>
                 <constraint firstItem="Jzd-zm-lWs" firstAttribute="centerY" secondItem="f7o-9s-mUm" secondAttribute="centerY" id="TY8-tb-Rji"/>
+                <constraint firstItem="vgN-SQ-u9O" firstAttribute="trailing" secondItem="f7o-9s-mUm" secondAttribute="trailing" constant="-20" id="V7P-sD-UqN"/>
                 <constraint firstItem="f7o-9s-mUm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="awr-O6-YUc"/>
                 <constraint firstItem="f7o-9s-mUm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bid-1Q-8JV"/>
                 <constraint firstItem="Jzd-zm-lWs" firstAttribute="leading" secondItem="f7o-9s-mUm" secondAttribute="leading" constant="20" id="bnA-Yn-whJ"/>
+                <constraint firstItem="vgN-SQ-u9O" firstAttribute="top" secondItem="f7o-9s-mUm" secondAttribute="top" constant="20" id="cmr-WG-hkj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bL2-ZI-8YH" secondAttribute="trailing" id="vSs-FW-oxX"/>
                 <constraint firstItem="bL2-ZI-8YH" firstAttribute="top" secondItem="f7o-9s-mUm" secondAttribute="bottom" constant="20" id="w2W-7m-jdN"/>
+                <constraint firstItem="vgN-SQ-u9O" firstAttribute="bottom" secondItem="f7o-9s-mUm" secondAttribute="bottom" constant="-20" id="waG-KP-JKi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="105"/>
         </view>
     </objects>
+    <resources>
+        <image name="Close" width="30" height="19"/>
+    </resources>
 </document>

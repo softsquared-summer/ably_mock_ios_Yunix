@@ -79,10 +79,25 @@ class SelectedProductTableViewCell: UITableViewCell {
         let totalPrice = Int(intPrice)!
         rootViewController.itemPrice.text = String(totalPrice - price) + "원"
         rootViewController.itemList.removeValue(forKey: index)
-        mainViewController.tableView.deleteRows(at: [indexPath], with: .none)
+        
         if rootViewController.itemList.count == 0 {
             rootViewController.priceView.isHidden = true
+        } else {
+            var newItemList: [Int : [String]] = [:]
+            var i = 0
+            var j = 0
+            while i <= rootViewController.itemList.count {
+                if (i == self.index) {
+                    i += 1
+                    continue
+                }
+                newItemList[j] = rootViewController.itemList[i]
+                i += 1
+                j += 1
+            }
+            rootViewController.itemList = newItemList
         }
+        mainViewController.tableView.deleteRows(at: [indexPath], with: .none)
         mainViewController.tableView.reloadData()
     }
     

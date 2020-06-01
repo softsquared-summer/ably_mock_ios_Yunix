@@ -26,6 +26,7 @@ class FirstOptionViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
         
         let selectedProductNib = UINib(nibName: SelectedProductTableViewCell.identifier, bundle: nil)
         tableView.register(selectedProductNib, forCellReuseIdentifier: SelectedProductTableViewCell.identifier)
@@ -54,6 +55,13 @@ class FirstOptionViewController: UIViewController {
     }
     
     func selectedSecondOption(rootViewController: ProductOptionViewController, result: [ProductOptionResponseResult], firstOptionList: [String]!, optionDictionary: [String : [String]]!, firstOption: String!, secondOption: String!, price: Int!) {
+        self.rootViewController = rootViewController
+       self.data = result
+       self.firstOptionList = firstOptionList
+       self.optionDictionary = optionDictionary
+        
+        var isOverlap = false
+        
         if rootViewController.itemList == [:] {
             rootViewController.priceView.isHidden = false
             rootViewController.itemList[rootViewController.itemList.count] = [firstOption, secondOption, String(price), "1"]
@@ -65,24 +73,29 @@ class FirstOptionViewController: UIViewController {
         } else {
             for i in rootViewController.itemList {
                 if i.value.contains(firstOption) && i.value.contains(secondOption) {
-                    break
-                } else {
-                    rootViewController.priceView.isHidden = false
-                    rootViewController.itemList[rootViewController.itemList.count] = [firstOption, secondOption, String(price), "1"]
-                    let totalCount = Int(rootViewController.itemCount.text!)!
-                    rootViewController.itemCount.text = String(totalCount + 1)
-                    let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원"]).joined()
-                    let totalPrice = Int(intPrice)!
-                    rootViewController.itemPrice.text = String(totalPrice + price) + "원"
+                    isOverlap = true
                     break
                 }
             }
+            if isOverlap {
+                let alert = UIAlertController(title: "같은 품목은 선택할 수 없습니다.", message: nil, preferredStyle: .alert)
+                let actionOkay = UIAlertAction(title: "확인", style: .default, handler: nil)
+                
+                alert.addAction(actionOkay)
+
+                rootViewController.present(alert, animated: true, completion: nil)
+            } else {
+                rootViewController.priceView.isHidden = false
+                rootViewController.itemList[rootViewController.itemList.count] = [firstOption, secondOption, String(price), "1"]
+                let totalCount = Int(rootViewController.itemCount.text!)!
+                rootViewController.itemCount.text = String(totalCount + 1)
+                let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원"]).joined()
+                let totalPrice = Int(intPrice)!
+                rootViewController.itemPrice.text = String(totalPrice + price) + "원"
+            }
         }
         
-        self.rootViewController = rootViewController
-        self.data = result
-        self.firstOptionList = firstOptionList
-        self.optionDictionary = optionDictionary
+       
     }
     /*
     // MARK: - Navigation

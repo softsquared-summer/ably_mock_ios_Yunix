@@ -101,10 +101,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZI-qb-sdf">
-                                <rect key="frame" x="280" y="15" width="20" height="20"/>
+                                <rect key="frame" x="280" y="10" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oZI-qb-sdf" secondAttribute="height" id="78M-Td-SNi"/>
-                                    <constraint firstAttribute="height" constant="20" id="gbO-wv-i5W"/>
+                                    <constraint firstAttribute="height" constant="25" id="gbO-wv-i5W"/>
                                 </constraints>
                                 <state key="normal" title="✕">
                                     <color key="titleColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,10 +119,10 @@
                             <constraint firstItem="0RB-h7-bqn" firstAttribute="centerY" secondItem="IvA-3F-Kl3" secondAttribute="centerY" id="BgN-3U-1QO"/>
                             <constraint firstItem="EM2-BI-Hn3" firstAttribute="leading" secondItem="32D-Hu-HTX" secondAttribute="leading" constant="20" id="Hub-9V-9qC"/>
                             <constraint firstItem="sDI-XB-TKZ" firstAttribute="centerY" secondItem="EM2-BI-Hn3" secondAttribute="centerY" id="ICl-aj-Kb2"/>
-                            <constraint firstItem="oZI-qb-sdf" firstAttribute="top" secondItem="32D-Hu-HTX" secondAttribute="top" constant="15" id="TET-9t-hHZ"/>
+                            <constraint firstItem="oZI-qb-sdf" firstAttribute="top" secondItem="32D-Hu-HTX" secondAttribute="top" constant="10" id="TET-9t-hHZ"/>
                             <constraint firstItem="xDS-y8-Cbb" firstAttribute="centerY" secondItem="sDI-XB-TKZ" secondAttribute="centerY" id="Yg4-Zx-rBd"/>
                             <constraint firstItem="zfk-na-scO" firstAttribute="top" secondItem="EM2-BI-Hn3" secondAttribute="bottom" constant="20" id="agE-Uz-1Zh"/>
-                            <constraint firstAttribute="trailing" secondItem="oZI-qb-sdf" secondAttribute="trailing" constant="20" id="cdO-FO-00a"/>
+                            <constraint firstAttribute="trailing" secondItem="oZI-qb-sdf" secondAttribute="trailing" constant="15" id="cdO-FO-00a"/>
                             <constraint firstItem="IvA-3F-Kl3" firstAttribute="leading" secondItem="e6D-yj-4nM" secondAttribute="trailing" constant="15" id="ciR-gM-FeZ"/>
                             <constraint firstItem="EM2-BI-Hn3" firstAttribute="height" secondItem="xDS-y8-Cbb" secondAttribute="height" multiplier="0.833333" id="eez-mw-iuQ"/>
                             <constraint firstAttribute="trailing" secondItem="0RB-h7-bqn" secondAttribute="trailing" constant="20" id="gNM-uO-NZG"/>

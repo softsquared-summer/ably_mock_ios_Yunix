@@ -17,6 +17,9 @@ class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var productNameLabel: UILabel!
     @IBOutlet var countLabel: UILabel!
     @IBOutlet var hotDealLabel: UILabel!
+    @IBOutlet var saleConstraint: NSLayoutConstraint!
+    @IBOutlet var hotDealWidthConstraint: NSLayoutConstraint!
+    @IBOutlet var hotDealConstraint: NSLayoutConstraint!
     
     static let identifier: String = "TodayCollectionViewCell"
     
@@ -24,19 +27,25 @@ class TodayCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         hotDealLabel.layer.borderWidth = 1
-        print("1")
+        hotDealLabel.layer.borderColor = UIColor(hex: 0xFE5160, alpha: 1).cgColor
     }
     
     func updateUI(_ data: [RecommendedProductResponseResult], index: Int) {
-        let isHotDeal = data[index].isHotDeal == "N"
+        let isNotHotDeal = !(data[index].isHotDeal == "N")
         let isNotSale = data[index].sale == "0%"
         let isCount = data[index].count == nil
         
         imageView.backgroundColor = .gray
         imageView.kf.setImage(with: URL(string: data[index].imgageUrl))
         imageView.layer.cornerRadius = 5
-        saleLabel.isHidden = isNotSale
-        saleLabel.text = data[index].sale
+        if isNotSale {
+            saleLabel.text = ""
+            saleConstraint.constant = 0
+        } else {
+            saleLabel.text = data[index].sale
+            saleConstraint.constant = 5
+        }
+        
         priceLabel.text = data[index].price
         marketLabel.text = data[index].marketName
         productNameLabel.text = data[index].productName
@@ -47,18 +56,14 @@ class TodayCollectionViewCell: UICollectionViewCell {
             countLabel.text = data[index].count
         }
         
-        
-        hotDealLabel.isHidden = isHotDeal
-        
-//        if isHotDeal {
-//            hotDealLabel.snp.makeConstraints { (make) in
-//                make.width.equalTo(0)
-//            }
-//        } else {
-//            hotDealLabel.snp.makeConstraints { (make) in
-//                make.width.equalTo(42.5)
-//            }
-//        }
-
+        if isNotHotDeal {
+            hotDealLabel.text = ""
+            hotDealWidthConstraint.constant = 0
+            hotDealConstraint.constant = 0
+        } else {
+            hotDealLabel.text = "핫딜"
+            hotDealWidthConstraint.constant = 32.5
+            hotDealConstraint.constant = 5
+        }
     }
 }
