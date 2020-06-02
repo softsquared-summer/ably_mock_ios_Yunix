@@ -27,6 +27,6 @@ class SecondOptionTableViewCell: UITableViewCell {
     
     func updateUI(secondOption: String!, price: Int!) {
         secondOptionLabel.text = secondOption
-        priceLabel.text = String(price) + "원"
+        priceLabel.text = String(price).insertComma + "원"
     }
 }

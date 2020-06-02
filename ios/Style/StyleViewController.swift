@@ -10,9 +10,25 @@ import UIKit
 
 class StyleViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    
+    var data: [[String]]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        let styleTableViewCell = UINib(nibName: StyleTableViewCell.identifier, bundle: nil)
+        tableView.register(styleTableViewCell, forCellReuseIdentifier: StyleTableViewCell.identifier)
+        
+        tableView.bounces = false
+        tableView.showsVerticalScrollIndicator = false
+        
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,4 +44,24 @@ class StyleViewController: UIViewController {
     }
     */
 
+}
+
+extension StyleViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: StyleTableViewCell.identifier, for: indexPath) as? StyleTableViewCell else {
+                    return UITableViewCell()
+        }
+
+        cell.updateUI()
+                
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 335
+    }
 }

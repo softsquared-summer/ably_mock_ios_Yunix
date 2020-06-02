@@ -67,9 +67,9 @@ class FirstOptionViewController: UIViewController {
             rootViewController.itemList[rootViewController.itemList.count] = [firstOption, secondOption, String(price), "1"]
             let totalCount = Int(rootViewController.itemCount.text!)!
             rootViewController.itemCount.text = String(totalCount + 1)
-            let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원"]).joined()
+            let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원", ","]).joined()
             let totalPrice = Int(intPrice)!
-            rootViewController.itemPrice.text = String(totalPrice + price) + "원"
+            rootViewController.itemPrice.text = String(totalPrice + price).insertComma + "원"
         } else {
             for i in rootViewController.itemList {
                 if i.value.contains(firstOption) && i.value.contains(secondOption) {
@@ -89,9 +89,9 @@ class FirstOptionViewController: UIViewController {
                 rootViewController.itemList[rootViewController.itemList.count] = [firstOption, secondOption, String(price), "1"]
                 let totalCount = Int(rootViewController.itemCount.text!)!
                 rootViewController.itemCount.text = String(totalCount + 1)
-                let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원"]).joined()
+                let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원", ","]).joined()
                 let totalPrice = Int(intPrice)!
-                rootViewController.itemPrice.text = String(totalPrice + price) + "원"
+                rootViewController.itemPrice.text = String(totalPrice + price).insertComma + "원"
             }
         }
         

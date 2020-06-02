@@ -90,6 +90,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         textField?.font = font
         
         navigationController?.navigationBar.topItem?.titleView = searchBar
+        
+        
     }
 
     

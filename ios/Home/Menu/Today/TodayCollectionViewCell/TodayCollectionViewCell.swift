@@ -20,9 +20,11 @@ class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var saleConstraint: NSLayoutConstraint!
     @IBOutlet var hotDealWidthConstraint: NSLayoutConstraint!
     @IBOutlet var hotDealConstraint: NSLayoutConstraint!
+    @IBOutlet var favoriteButton: UIButton!
     
     static let identifier: String = "TodayCollectionViewCell"
     var rootViewController: TodayViewController!
+    var index: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +39,7 @@ class TodayCollectionViewCell: UICollectionViewCell {
         let isNotHotDeal = !(data[index].isHotDeal == "N")
         let isNotSale = data[index].sale == "0%"
         let isCount = data[index].count == nil
+        let isHeart = data[index].isMyHeart == "Y"
         
         imageView.backgroundColor = .gray
         imageView.kf.setImage(with: URL(string: data[index].imgageUrl))
@@ -69,6 +72,22 @@ class TodayCollectionViewCell: UICollectionViewCell {
             hotDealConstraint.constant = 5
         }
         
+        if isHeart {
+            favoriteButton.setImage(UIImage.favoritePink, for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage.favoriteGray, for: .normal)
+        }
         
+        self.index = index
+        
+    }
+    @IBAction func pressedFavorite(_ sender: Any) {
+        if rootViewController.recommendData[index].isMyHeart == "N" {
+            rootViewController.recommendData[index].isMyHeart = "Y"
+            favoriteButton.setImage(UIImage.favoritePink, for: .normal)
+        } else {
+            rootViewController.recommendData[index].isMyHeart = "N"
+            favoriteButton.setImage(UIImage.favoriteGray, for: .normal)
+        }
     }
 }

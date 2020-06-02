@@ -33,6 +33,10 @@
 		C3534EE4248696B100C1ED81 /* AutoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EE3248696B100C1ED81 /* AutoLoginResponse.swift */; };
 		C3534EE62486A01A00C1ED81 /* BannerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EE52486A01A00C1ED81 /* BannerDataManager.swift */; };
 		C3534EE82486A02700C1ED81 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EE72486A02700C1ED81 /* BannerResponse.swift */; };
+		C3534EEC2486C4BC00C1ED81 /* StyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EEA2486C4BC00C1ED81 /* StyleTableViewCell.swift */; };
+		C3534EED2486C4BC00C1ED81 /* StyleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3534EEB2486C4BC00C1ED81 /* StyleTableViewCell.xib */; };
+		C3534EF12486D36E00C1ED81 /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EEF2486D36E00C1ED81 /* MarketTableViewCell.swift */; };
+		C3534EF22486D36E00C1ED81 /* MarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3534EF02486D36E00C1ED81 /* MarketTableViewCell.xib */; };
 		C3539339247D82E900BA4443 /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3539338247D82E900BA4443 /* TapBarController.swift */; };
 		C353BAD6248055D500352649 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353BAD5248055D500352649 /* UIImage.swift */; };
 		C3541F4D248384850070149C /* ProductOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3541F4B248384850070149C /* ProductOptionViewController.swift */; };
@@ -117,6 +121,10 @@
 		C3534EE3248696B100C1ED81 /* AutoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginResponse.swift; sourceTree = "<group>"; };
 		C3534EE52486A01A00C1ED81 /* BannerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDataManager.swift; sourceTree = "<group>"; };
 		C3534EE72486A02700C1ED81 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
+		C3534EEA2486C4BC00C1ED81 /* StyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTableViewCell.swift; sourceTree = "<group>"; };
+		C3534EEB2486C4BC00C1ED81 /* StyleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StyleTableViewCell.xib; sourceTree = "<group>"; };
+		C3534EEF2486D36E00C1ED81 /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
+		C3534EF02486D36E00C1ED81 /* MarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketTableViewCell.xib; sourceTree = "<group>"; };
 		C3539338247D82E900BA4443 /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		C353BAD5248055D500352649 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C3541F4B248384850070149C /* ProductOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOptionViewController.swift; sourceTree = "<group>"; };
@@ -350,6 +358,24 @@
 				C3534EE3248696B100C1ED81 /* AutoLoginResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		C3534EE92486C46000C1ED81 /* StyleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3534EEA2486C4BC00C1ED81 /* StyleTableViewCell.swift */,
+				C3534EEB2486C4BC00C1ED81 /* StyleTableViewCell.xib */,
+			);
+			path = StyleTableViewCell;
+			sourceTree = "<group>";
+		};
+		C3534EEE2486D35800C1ED81 /* MarketTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3534EEF2486D36E00C1ED81 /* MarketTableViewCell.swift */,
+				C3534EF02486D36E00C1ED81 /* MarketTableViewCell.xib */,
+			);
+			path = MarketTableViewCell;
 			sourceTree = "<group>";
 		};
 		C3541F4A248384570070149C /* ProductOption */ = {
@@ -607,6 +633,7 @@
 		C3B8EACC247D7E91003A56FD /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				C3534EE92486C46000C1ED81 /* StyleTableViewCell */,
 				C3B8EAD5247D7EF8003A56FD /* StyleViewController.swift */,
 				C3B8EAD6247D7EF8003A56FD /* StyleViewController.xib */,
 			);
@@ -627,6 +654,7 @@
 		C3B8EACE247D7EBE003A56FD /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				C3534EEE2486D35800C1ED81 /* MarketTableViewCell */,
 				C3B8EAD9247D7F05003A56FD /* MarketViewController.swift */,
 				C3B8EADA247D7F05003A56FD /* MarketViewController.xib */,
 			);
@@ -710,6 +738,7 @@
 				C3541F652483E3CE0070149C /* SelectedProductTableViewCell.xib in Resources */,
 				C328252B247E1E30004985EC /* FavoriteItemViewController.xib in Resources */,
 				C305A1622486865C00A3B1BA /* OrderViewController.xib in Resources */,
+				C3534EF22486D36E00C1ED81 /* MarketTableViewCell.xib in Resources */,
 				C3AD2642248150410053EB85 /* TodayCollectionViewCell.xib in Resources */,
 				C328252F247E1E3C004985EC /* FavoriteMarketViewController.xib in Resources */,
 				C3AD263D248134DA0053EB85 /* HotDealViewController.xib in Resources */,
@@ -720,6 +749,7 @@
 				C3B8EAE0247D7F12003A56FD /* FavoriteViewController.xib in Resources */,
 				C3B8EACA247D7919003A56FD /* MyPageViewController.xib in Resources */,
 				C356B56D2482CF11003AC048 /* InputUserInfoViewController.xib in Resources */,
+				C3534EED2486C4BC00C1ED81 /* StyleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +821,7 @@
 				C352EE0324826D4A00027E20 /* ProductInfoViewController.swift in Sources */,
 				C328252E247E1E3C004985EC /* FavoriteMarketViewController.swift in Sources */,
 				BDEF323722F9B7CB00FEF8BD /* ios.xcdatamodeld in Sources */,
+				C3534EF12486D36E00C1ED81 /* MarketTableViewCell.swift in Sources */,
 				C352EE0A24826D9D00027E20 /* ProductInfoDataManager.swift in Sources */,
 				C3AD2648248159E60053EB85 /* TodayDataManager.swift in Sources */,
 				BD9BF17822F9C6CF009E47EB /* UIColor.swift in Sources */,
@@ -802,6 +833,7 @@
 				C352EE0824826D8C00027E20 /* ProductInfoResponse.swift in Sources */,
 				C3541F4D248384850070149C /* ProductOptionViewController.swift in Sources */,
 				C353BAD6248055D500352649 /* UIImage.swift in Sources */,
+				C3534EEC2486C4BC00C1ED81 /* StyleTableViewCell.swift in Sources */,
 				C356B56C2482CF11003AC048 /* InputUserInfoViewController.swift in Sources */,
 				C3541F79248439530070149C /* SelectedSecondOptionViewController.swift in Sources */,
 				C3534EE82486A02700C1ED81 /* BannerResponse.swift in Sources */,

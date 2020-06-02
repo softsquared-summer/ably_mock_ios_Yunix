@@ -10,9 +10,23 @@ import UIKit
 
 class MarketViewController: UIViewController {
 
+    @IBOutlet var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        let marketTableViewCell = UINib(nibName: MarketTableViewCell.identifier, bundle: nil)
+        tableView.register(marketTableViewCell, forCellReuseIdentifier: MarketTableViewCell.identifier)
+        
+        tableView.bounces = false
+        tableView.showsVerticalScrollIndicator = false
+        
+        tableView.isScrollEnabled = false
+        
+        tableViewHeight.constant = 1750
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,4 +42,23 @@ class MarketViewController: UIViewController {
     }
     */
 
+}
+
+extension MarketViewController: UITableViewDelegate, UITableViewDataSource {func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MarketTableViewCell.identifier, for: indexPath) as? MarketTableViewCell else {
+                    return UITableViewCell()
+        }
+
+        cell.updateUI(index: indexPath.row + 1)
+                
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
+    }
 }

@@ -63,6 +63,17 @@
                         <color key="textColor" red="0.99607843139999996" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="highlightedColor" red="0.99607843139999996" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0j-dK-IZx">
+                        <rect key="frame" x="432.5" y="54" width="19.5" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="bjY-ai-WXc"/>
+                            <constraint firstAttribute="width" secondItem="D0j-dK-IZx" secondAttribute="height" multiplier="51:47" id="dRD-FB-94X"/>
+                        </constraints>
+                        <state key="normal" image="favoriteGray"/>
+                        <connections>
+                            <action selector="pressedFavorite:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vMI-yI-ATs"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,6 +81,7 @@
                 <constraint firstItem="vFd-v0-Zb9" firstAttribute="leading" secondItem="P7p-ej-peq" secondAttribute="trailing" constant="5" id="7nX-lW-mjs"/>
                 <constraint firstItem="UmA-6F-Nx9" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="7oV-oq-ed4"/>
                 <constraint firstItem="UmA-6F-Nx9" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="BRc-Tb-JMp"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="D0j-dK-IZx" secondAttribute="trailing" constant="10" id="C3O-du-JeX"/>
                 <constraint firstItem="LO0-Th-zoy" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="E20-01-6pJ"/>
                 <constraint firstItem="LO0-Th-zoy" firstAttribute="top" secondItem="P7p-ej-peq" secondAttribute="bottom" constant="10" id="EFR-wN-ohm"/>
                 <constraint firstItem="c8J-vm-INU" firstAttribute="top" secondItem="Pnz-4u-n7p" secondAttribute="bottom" constant="18" id="EYj-kj-8U5"/>
@@ -85,11 +97,13 @@
                 <constraint firstItem="vFd-v0-Zb9" firstAttribute="centerY" secondItem="P7p-ej-peq" secondAttribute="centerY" id="sNI-wU-miY"/>
                 <constraint firstItem="P7p-ej-peq" firstAttribute="top" secondItem="UmA-6F-Nx9" secondAttribute="bottom" constant="10" id="wyb-7S-g4a"/>
                 <constraint firstItem="LO0-Th-zoy" firstAttribute="top" secondItem="vFd-v0-Zb9" secondAttribute="bottom" constant="10" id="z7R-gb-wsC"/>
+                <constraint firstItem="D0j-dK-IZx" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="10" id="zGY-Fb-TcZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="580" height="1050"/>
             <connections>
                 <outlet property="countLabel" destination="c8J-vm-INU" id="340-PV-twM"/>
+                <outlet property="favoriteButton" destination="D0j-dK-IZx" id="V9G-lR-V7i"/>
                 <outlet property="hotDealConstraint" destination="Mal-yw-gLm" id="5cf-fC-shC"/>
                 <outlet property="hotDealLabel" destination="WPi-y8-pqV" id="KXW-us-Ikg"/>
                 <outlet property="hotDealWidthConstraint" destination="sMb-of-CB2" id="KSa-Xf-8X3"/>
@@ -103,4 +117,7 @@
             <point key="canvasLocation" x="104.34782608695653" y="214.95535714285714"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="favoriteGray" width="51" height="47"/>
+    </resources>
 </document>

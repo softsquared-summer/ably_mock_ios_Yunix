@@ -39,6 +39,7 @@ struct RecommendedProductResponseResult {
     var count: String!
     var isHotDeal: String!
     var isNew: String!
+    var isMyHeart: String!
 }
 
 extension RecommendedProductResponseResult: Mappable {
@@ -56,6 +57,7 @@ extension RecommendedProductResponseResult: Mappable {
         count <- map["purchaseCnt"]
         isHotDeal <- map["isHotDeal"]
         isNew <- map["isNew"]
+        isMyHeart <- map["isMyHeart"]
     }
     
 }

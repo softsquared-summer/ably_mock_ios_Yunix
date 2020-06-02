@@ -43,12 +43,12 @@ class SelectedProductTableViewCell: UITableViewCell {
             countLabel.text = String(count)
             rootViewController.itemList[index]![3] = String(count)
             let price = Int(result[2])!
-            priceLabel.text = "\(count * price)원"
+            priceLabel.text = "\(count * price)".insertComma + "원"
             let totalCount = Int(rootViewController.itemCount.text!)!
             rootViewController.itemCount.text = String(totalCount - 1)
-            let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원"]).joined()
+            let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원", ","]).joined()
             let totalPrice = Int(intPrice)!
-            rootViewController.itemPrice.text = String(totalPrice - price) + "원"
+            rootViewController.itemPrice.text = String(totalPrice - price).insertComma + "원"
             mainViewController.tableView.reloadData()
         }
     }
@@ -60,12 +60,12 @@ class SelectedProductTableViewCell: UITableViewCell {
             countLabel.text = String(count)
             rootViewController.itemList[index]![3] = String(count)
             let price = Int(result[2])!
-            priceLabel.text = "\(count * price)원"
+            priceLabel.text = "\(count * price)".insertComma + "원"
             let totalCount = Int(rootViewController.itemCount.text!)!
             rootViewController.itemCount.text = String(totalCount + 1)
             let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원", ","]).joined()
             let totalPrice = Int(intPrice)!
-            rootViewController.itemPrice.text = String(totalPrice + price) + "원"
+            rootViewController.itemPrice.text = String(totalPrice + price).insertComma + "원"
             mainViewController.tableView.reloadData()
         }
     }
@@ -75,9 +75,9 @@ class SelectedProductTableViewCell: UITableViewCell {
         let price = Int(result[2])! * count
         let totalCount = Int(rootViewController.itemCount.text!)!
         rootViewController.itemCount.text = String(totalCount - count)
-        let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원"]).joined()
+        let intPrice = rootViewController.itemPrice.text!.components(separatedBy: ["원", ","]).joined()
         let totalPrice = Int(intPrice)!
-        rootViewController.itemPrice.text = String(totalPrice - price) + "원"
+        rootViewController.itemPrice.text = String(totalPrice - price).insertComma + "원"
         rootViewController.itemList.removeValue(forKey: index)
         
         if rootViewController.itemList.count == 0 {
@@ -108,7 +108,7 @@ class SelectedProductTableViewCell: UITableViewCell {
         countLabel.text = result[3]
         let count = Int(result[3])
         let price = Int(result[2])
-        priceLabel.text = "\(count! * price!)원"
+        priceLabel.text = "\(count! * price!)".insertComma + "원"
         self.mainViewController = mainViewController
         self.rootViewController = rootViewController
         self.result = result

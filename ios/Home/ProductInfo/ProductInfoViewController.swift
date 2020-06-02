@@ -74,7 +74,7 @@ class ProductInfoViewController: UIViewController {
         
         if productInfoData?.discountRatio == "0%" {
             discountLabel.text = ""
-            couponLabel.text = "2000원"
+            couponLabel.text = "2,000원"
             saleConstraint.constant = 0
             originalPrice.text = ""
             saleLine.isHidden = true
@@ -105,7 +105,11 @@ class ProductInfoViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func recieveInfo(_ index: Int, _ todayViewController: TodayViewController) {

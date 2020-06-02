@@ -46,12 +46,14 @@ class HomeViewController: BaseViewController {
        menuView.reloadData(options: options)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
+    override func viewDidAppear(_ animated: Bool) {
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
+        self.navigationController!.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 160.0)
     }
     /*
     // MARK: - Navigation
