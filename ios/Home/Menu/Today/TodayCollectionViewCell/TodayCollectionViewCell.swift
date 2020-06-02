@@ -22,6 +22,7 @@ class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var hotDealConstraint: NSLayoutConstraint!
     
     static let identifier: String = "TodayCollectionViewCell"
+    var rootViewController: TodayViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +31,9 @@ class TodayCollectionViewCell: UICollectionViewCell {
         hotDealLabel.layer.borderColor = UIColor(hex: 0xFE5160, alpha: 1).cgColor
     }
     
-    func updateUI(_ data: [RecommendedProductResponseResult], index: Int) {
+    func updateUI(_ data: [RecommendedProductResponseResult], index: Int, rootViewController: TodayViewController) {
+        self.rootViewController = rootViewController
+        
         let isNotHotDeal = !(data[index].isHotDeal == "N")
         let isNotSale = data[index].sale == "0%"
         let isCount = data[index].count == nil
@@ -65,5 +68,7 @@ class TodayCollectionViewCell: UICollectionViewCell {
             hotDealWidthConstraint.constant = 32.5
             hotDealConstraint.constant = 5
         }
+        
+        
     }
 }

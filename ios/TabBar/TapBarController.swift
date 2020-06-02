@@ -9,6 +9,9 @@
 import UIKit
 import CoreGraphics
 
+let userToken = UserDefaults.standard.string(forKey: "USER_TOKEN")
+let userName = UserDefaults.standard.string(forKey: "USER_NAME")
+
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     var viewControllerList: [UIViewController] = []
     
@@ -22,7 +25,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         viewControllerList.append(FavoriteViewController())
         viewControllerList.append(MyPageViewController())
         
-        
+        AutoLoginDataManager().getAutoLogin(self, userToken, userName)
     }
     
     override func viewWillAppear(_ animated: Bool) {

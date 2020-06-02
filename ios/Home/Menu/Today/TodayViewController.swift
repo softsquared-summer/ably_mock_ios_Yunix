@@ -7,25 +7,83 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TodayViewController: BaseViewController {
     
-    var recommendData: [RecommendedProductResponseResult]?
+    @IBOutlet var mainScrollView: UIScrollView!
+    @IBOutlet var bannerScrollView: UIView!
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var currentPageLabel: UILabel!
+    @IBOutlet var totalPageLabel: UILabel!
+    @IBOutlet var collectionViewHeight: NSLayoutConstraint!
+    
+    var isWaiting: Bool = false
+    var recommendData: [RecommendedProductResponseResult] = []
     var rootViewController: HomeViewController!
     var isScrolling: Bool = false
-    
+    var scrollView: UIScrollView!
     @IBOutlet var collectionView: UICollectionView!
+    var bannerData: [BannerResponseResult]!
+    var index: Int!
+    var currentPage: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        if !(userToken == "") {
+            userNameLabel.text = userName
+        } else {
+            userNameLabel.text = "회원"
+        }
+        mainScrollView.delegate = self
+        
+        
+//        imagePageControl.layer.zPosition = contentView.layer.zPosition + 1
+        
+//        collectionView = UICollectionView(frame: contentView.bounds)
         
         let todayCellNib = UINib(nibName: TodayCollectionViewCell.identifier, bundle: nil)
         collectionView.register(todayCellNib, forCellWithReuseIdentifier: TodayCollectionViewCell.identifier)
         
-//        TodayDataManager().getRecommendedProduct(self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+       
+        collectionView.isScrollEnabled = false
+        
+         contentView.addSubview(collectionView)
+        
+        BannerDataManager().getRecommendedProduct(self)
+    }
+    
+    func receivedBanner(bannerData: [BannerResponseResult]!) {
+        var i = 0
+        index = bannerData.count
+        
+        scrollView = UIScrollView(frame: bannerScrollView.bounds)
+        scrollView.delegate = self
+        
+        while i < index! {
+            let subView = UIImageView()
+            subView.kf.setImage(with: URL(string: bannerData[i].bannerUrl))
+            subView.frame = bannerScrollView.bounds
+            subView.frame.origin.x = UIScreen.main.bounds.width * CGFloat(i)
+            scrollView.addSubview(subView)
+            i += 1
+        }
+        
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.isPagingEnabled = true
+        scrollView.contentSize.width = UIScreen.main.bounds.width * CGFloat(index!)
+        scrollView.contentSize.height = bannerScrollView.frame.size.height
+        scrollView.alwaysBounceHorizontal = false
+        scrollView.bounces = false
+        
+        bannerScrollView.addSubview(scrollView)
+        totalPageLabel.text = String(index!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +120,7 @@ class TodayViewController: BaseViewController {
 
 extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recommendData?.count ?? 0
+        return recommendData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -71,7 +129,7 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
             return UICollectionViewCell()
         }
         
-        cell.updateUI(recommendData!, index: indexPath.row)
+        cell.updateUI(recommendData, index: indexPath.row, rootViewController: self)
         
         return cell
     }
@@ -81,4 +139,20 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
     }
     
+}
+
+extension TodayViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // floor 내림, ceil 올림
+        // contentOffset는 현재 스크롤된 좌표
+        if scrollView == self.scrollView {
+            let page = floor(scrollView.contentOffset.x / UIScreen.main.bounds.width)
+            let intPage = Int(page)
+            currentPageLabel.text = String(intPage + 1)
+        }
+        
+        if scrollView == self.mainScrollView {
+            rootViewController.navigationController?.setNavigationBarHidden((scrollView.contentOffset.y >= 10), animated: true)
+        }
+    }
 }

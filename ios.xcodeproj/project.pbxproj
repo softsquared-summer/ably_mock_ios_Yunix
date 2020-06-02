@@ -19,6 +19,8 @@
 		BDEF323722F9B7CB00FEF8BD /* ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDEF323522F9B7CB00FEF8BD /* ios.xcdatamodeld */; };
 		BDEF323922F9B7CB00FEF8BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDEF323822F9B7CB00FEF8BD /* Assets.xcassets */; };
 		BDEF323C22F9B7CB00FEF8BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEF323A22F9B7CB00FEF8BD /* LaunchScreen.storyboard */; };
+		C305A1612486865C00A3B1BA /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305A15F2486865C00A3B1BA /* OrderViewController.swift */; };
+		C305A1622486865C00A3B1BA /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C305A1602486865C00A3B1BA /* OrderViewController.xib */; };
 		C328252A247E1E30004985EC /* FavoriteItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3282528247E1E30004985EC /* FavoriteItemViewController.swift */; };
 		C328252B247E1E30004985EC /* FavoriteItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3282529247E1E30004985EC /* FavoriteItemViewController.xib */; };
 		C328252E247E1E3C004985EC /* FavoriteMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328252C247E1E3C004985EC /* FavoriteMarketViewController.swift */; };
@@ -27,6 +29,10 @@
 		C352EE0424826D4A00027E20 /* ProductInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C352EE0224826D4A00027E20 /* ProductInfoViewController.xib */; };
 		C352EE0824826D8C00027E20 /* ProductInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C352EE0724826D8C00027E20 /* ProductInfoResponse.swift */; };
 		C352EE0A24826D9D00027E20 /* ProductInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C352EE0924826D9D00027E20 /* ProductInfoDataManager.swift */; };
+		C3534EE22486969B00C1ED81 /* AutoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EE12486969B00C1ED81 /* AutoLoginDataManager.swift */; };
+		C3534EE4248696B100C1ED81 /* AutoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EE3248696B100C1ED81 /* AutoLoginResponse.swift */; };
+		C3534EE62486A01A00C1ED81 /* BannerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EE52486A01A00C1ED81 /* BannerDataManager.swift */; };
+		C3534EE82486A02700C1ED81 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3534EE72486A02700C1ED81 /* BannerResponse.swift */; };
 		C3539339247D82E900BA4443 /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3539338247D82E900BA4443 /* TapBarController.swift */; };
 		C353BAD6248055D500352649 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353BAD5248055D500352649 /* UIImage.swift */; };
 		C3541F4D248384850070149C /* ProductOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3541F4B248384850070149C /* ProductOptionViewController.swift */; };
@@ -97,6 +103,8 @@
 		BDEF323822F9B7CB00FEF8BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDEF323B22F9B7CB00FEF8BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDEF323D22F9B7CB00FEF8BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C305A15F2486865C00A3B1BA /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		C305A1602486865C00A3B1BA /* OrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
 		C3282528247E1E30004985EC /* FavoriteItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemViewController.swift; sourceTree = "<group>"; };
 		C3282529247E1E30004985EC /* FavoriteItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteItemViewController.xib; sourceTree = "<group>"; };
 		C328252C247E1E3C004985EC /* FavoriteMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMarketViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +113,10 @@
 		C352EE0224826D4A00027E20 /* ProductInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInfoViewController.xib; sourceTree = "<group>"; };
 		C352EE0724826D8C00027E20 /* ProductInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoResponse.swift; sourceTree = "<group>"; };
 		C352EE0924826D9D00027E20 /* ProductInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoDataManager.swift; sourceTree = "<group>"; };
+		C3534EE12486969B00C1ED81 /* AutoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginDataManager.swift; sourceTree = "<group>"; };
+		C3534EE3248696B100C1ED81 /* AutoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginResponse.swift; sourceTree = "<group>"; };
+		C3534EE52486A01A00C1ED81 /* BannerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDataManager.swift; sourceTree = "<group>"; };
+		C3534EE72486A02700C1ED81 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
 		C3539338247D82E900BA4443 /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		C353BAD5248055D500352649 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C3541F4B248384850070149C /* ProductOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOptionViewController.swift; sourceTree = "<group>"; };
@@ -249,9 +261,20 @@
 			path = ios;
 			sourceTree = "<group>";
 		};
+		C305A15E2486858F00A3B1BA /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				C305A15F2486865C00A3B1BA /* OrderViewController.swift */,
+				C305A1602486865C00A3B1BA /* OrderViewController.xib */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		C34A3CFD247DCE1500AFBDE1 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C3534EE02486967F00C1ED81 /* Entity */,
+				C3534EDF2486967500C1ED81 /* DataManager */,
 				C3539338247D82E900BA4443 /* TapBarController.swift */,
 			);
 			path = TabBar;
@@ -309,6 +332,22 @@
 			isa = PBXGroup;
 			children = (
 				C352EE0724826D8C00027E20 /* ProductInfoResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C3534EDF2486967500C1ED81 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3534EE12486969B00C1ED81 /* AutoLoginDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		C3534EE02486967F00C1ED81 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C3534EE3248696B100C1ED81 /* AutoLoginResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -527,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				C3AD2647248159E60053EB85 /* TodayDataManager.swift */,
+				C3534EE52486A01A00C1ED81 /* BannerDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -535,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				C3AD2645248155B10053EB85 /* RecommendedProductResponse.swift */,
+				C3534EE72486A02700C1ED81 /* BannerResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -556,6 +597,7 @@
 				C352EE0024826CF400027E20 /* Menu */,
 				C352EDFF24826C0700027E20 /* ProductInfo */,
 				C3541F4A248384570070149C /* ProductOption */,
+				C305A15E2486858F00A3B1BA /* Order */,
 				C3B8EAD1247D7EEA003A56FD /* HomeViewController.swift */,
 				C3B8EAD2247D7EEA003A56FD /* HomeViewController.xib */,
 			);
@@ -667,6 +709,7 @@
 				C3B8EADC247D7F06003A56FD /* MarketViewController.xib in Resources */,
 				C3541F652483E3CE0070149C /* SelectedProductTableViewCell.xib in Resources */,
 				C328252B247E1E30004985EC /* FavoriteItemViewController.xib in Resources */,
+				C305A1622486865C00A3B1BA /* OrderViewController.xib in Resources */,
 				C3AD2642248150410053EB85 /* TodayCollectionViewCell.xib in Resources */,
 				C328252F247E1E3C004985EC /* FavoriteMarketViewController.xib in Resources */,
 				C3AD263D248134DA0053EB85 /* HotDealViewController.xib in Resources */,
@@ -731,6 +774,8 @@
 			files = (
 				C36491C92484427B00DAB857 /* SecondOptionTableViewCell.swift in Sources */,
 				C356B5682482C8A3003AC048 /* LoginViewController.swift in Sources */,
+				C3534EE22486969B00C1ED81 /* AutoLoginDataManager.swift in Sources */,
+				C3534EE4248696B100C1ED81 /* AutoLoginResponse.swift in Sources */,
 				C3AD264B248161860053EB85 /* BestViewController.swift in Sources */,
 				C356B57F24830D5D003AC048 /* LoginResponse.swift in Sources */,
 				C328252A247E1E30004985EC /* FavoriteItemViewController.swift in Sources */,
@@ -739,6 +784,7 @@
 				C3B8EADB247D7F05003A56FD /* MarketViewController.swift in Sources */,
 				C3AD2646248155B10053EB85 /* RecommendedProductResponse.swift in Sources */,
 				C3AD263C248134DA0053EB85 /* HotDealViewController.swift in Sources */,
+				C3534EE62486A01A00C1ED81 /* BannerDataManager.swift in Sources */,
 				C3541F54248389260070149C /* ProductOptionDataManager.swift in Sources */,
 				C3541F642483E3CE0070149C /* SelectedProductTableViewCell.swift in Sources */,
 				C3539339247D82E900BA4443 /* TapBarController.swift in Sources */,
@@ -758,6 +804,7 @@
 				C353BAD6248055D500352649 /* UIImage.swift in Sources */,
 				C356B56C2482CF11003AC048 /* InputUserInfoViewController.swift in Sources */,
 				C3541F79248439530070149C /* SelectedSecondOptionViewController.swift in Sources */,
+				C3534EE82486A02700C1ED81 /* BannerResponse.swift in Sources */,
 				C3541F6C24841A700070149C /* SelectedFirstOptionViewController.swift in Sources */,
 				BD9BF17E22F9CD60009E47EB /* ColorPalette.swift in Sources */,
 				C3541F7124841C2B0070149C /* FirstOptionTableViewCell.swift in Sources */,
@@ -770,6 +817,7 @@
 				C3541F52248389110070149C /* ProductOptionResponse.swift in Sources */,
 				C3B8EADF247D7F12003A56FD /* FavoriteViewController.swift in Sources */,
 				C3AD2641248150410053EB85 /* TodayCollectionViewCell.swift in Sources */,
+				C305A1612486865C00A3B1BA /* OrderViewController.swift in Sources */,
 				BD9BF17C22F9C737009E47EB /* UIViewController.swift in Sources */,
 				BDEF322F22F9B7CB00FEF8BD /* AppDelegate.swift in Sources */,
 				C3AD262C2481345F0053EB85 /* TodayViewController.swift in Sources */,

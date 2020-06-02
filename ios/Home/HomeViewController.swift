@@ -113,7 +113,7 @@ extension HomeViewController: SwipeMenuViewDelegate, SwipeMenuViewDataSource {
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewWillSetupAt currentIndex: Int) {
         if currentIndex == 0 {
             todayViewController.rootViewController = self
-            TodayDataManager().getRecommendedProduct(todayViewController)
+            TodayDataManager().getRecommendedProduct(todayViewController, 1)
         }
     }
 }
