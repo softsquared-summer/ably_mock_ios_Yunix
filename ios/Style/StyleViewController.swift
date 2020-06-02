@@ -16,7 +16,7 @@ class StyleViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "스타일"
+        
     }
     /*
     // MARK: - Navigation

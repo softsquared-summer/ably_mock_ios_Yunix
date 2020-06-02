@@ -18,10 +18,10 @@ class MyPageViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "마이페이지"
     }
 
     @IBAction func pressedLogin(_ sender: PMSuperButton) {
+        
         self.navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     

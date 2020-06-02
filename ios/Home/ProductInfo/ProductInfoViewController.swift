@@ -28,6 +28,8 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet var saleConstraint: NSLayoutConstraint!
     @IBOutlet var saleLine: UIView!
     
+    @IBOutlet var mainScrollView: UIScrollView!
+    
     var index: Int!
     var productInfoData: ProductInfoResponseResult?
     var currentIndex: Int!
@@ -35,13 +37,19 @@ class ProductInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem?.title = nil
+//        navigationController?.navigationBar.snp.makeConstraints({ (make) in
+//            make.top.equalTo(self.view.superview?.snp.top as! ConstraintRelatableTarget)
+//        })
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
         
         self.index = productInfoData?.normalImgUrlList.count
         var i = 0
         
         scrollView = UIScrollView(frame: contentView.bounds)
         scrollView.delegate = self
+        mainScrollView.delegate = self
         
         while i < index! {
             let subView = UIImageView()
@@ -96,6 +104,10 @@ class ProductInfoViewController: UIViewController {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     func recieveInfo(_ index: Int, _ todayViewController: TodayViewController) {
         ProductInfoDataManager().getProductInfo(index: index, todayViewController: todayViewController)
     }
@@ -128,6 +140,20 @@ extension ProductInfoViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // floor 내림, ceil 올림
         // contentOffset는 현재 스크롤된 좌표
-        imagePageControl.currentPage = Int(floor(scrollView.contentOffset.x / UIScreen.main.bounds.width))
+        if scrollView == self.scrollView {
+            imagePageControl.currentPage = Int(floor(scrollView.contentOffset.x / UIScreen.main.bounds.width))
+        } else if scrollView == self.mainScrollView {
+            let height = scrollView.contentOffset.y
+            var alpha: CGFloat = 1
+            
+            if height <= 0 {
+                alpha = (64/350) * ( 1 - (-height / 64) )
+            } else if height > 0 {
+                alpha = (284/350) * (height / 284) + (64/350)
+            }
+            
+            navigationController?.navigationBar.backgroundColor = UIColor.white.withAlphaComponent(alpha)
+        }
+        
     }
 }

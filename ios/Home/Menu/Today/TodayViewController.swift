@@ -37,6 +37,12 @@ class TodayViewController: BaseViewController {
     }
     
     func moveProductInfoViewController(data: ProductInfoResponseResult, index: Int) {
+//        rootViewController.navigationController?.navigationBar.isTranslucent = true
+//        rootViewController.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//       rootViewController.navigationController?.navigationBar.shadowImage = UIImage()
+//        rootViewController.navigationController?.navigationBar.frame = .zero
+//        rootViewController.navigationController?.navigationBar.barTintColor = .clear
+        
         let nextViewController = ProductInfoViewController()
         nextViewController.productInfoData = data
         nextViewController.currentIndex = index
@@ -72,6 +78,7 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         ProductInfoDataManager().getProductInfo(index: indexPath.row + 1, todayViewController: self)
+        
     }
     
 }

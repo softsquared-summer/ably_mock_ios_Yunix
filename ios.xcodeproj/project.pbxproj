@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B20BCCDCCFABC3C6C34C0C8C /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFC1B75E2DF73CFA0D0DAA7 /* Pods_ios.framework */; };
-		BD75ABD82301B5F600E0FC7A /* NoticePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD75ABD72301B5F600E0FC7A /* NoticePopUp.swift */; };
-		BD75ABDA2301B73400E0FC7A /* NoticePopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD75ABD92301B73400E0FC7A /* NoticePopUpDelegate.swift */; };
-		BD75ABDC2301B7B500E0FC7A /* NoticePopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD75ABDB2301B7B500E0FC7A /* NoticePopUp.storyboard */; };
-		BD75ABDE2301BCE600E0FC7A /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD75ABDD2301BCE600E0FC7A /* MainDataManager.swift */; };
-		BD75ABE02301BE8200E0FC7A /* TutorialResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD75ABDF2301BE8200E0FC7A /* TutorialResponse.swift */; };
 		BD9BF17322F9C3D5009E47EB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF17222F9C3D5009E47EB /* BaseViewController.swift */; };
 		BD9BF17522F9C494009E47EB /* CusomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF17422F9C494009E47EB /* CusomIndicatorView.swift */; };
 		BD9BF17822F9C6CF009E47EB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF17722F9C6CF009E47EB /* UIColor.swift */; };
@@ -20,10 +15,6 @@
 		BD9BF17C22F9C737009E47EB /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF17B22F9C737009E47EB /* UIViewController.swift */; };
 		BD9BF17E22F9CD60009E47EB /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF17D22F9CD60009E47EB /* ColorPalette.swift */; };
 		BD9BF18022F9CDEF009E47EB /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF17F22F9CDEF009E47EB /* String.swift */; };
-		BD9BF18322F9D1A4009E47EB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF18122F9D1A4009E47EB /* SplashViewController.swift */; };
-		BD9BF18422F9D1A4009E47EB /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9BF18222F9D1A4009E47EB /* SplashViewController.xib */; };
-		BD9BF18722F9DCC7009E47EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9BF18522F9DCC7009E47EB /* MainViewController.swift */; };
-		BD9BF18822F9DCC7009E47EB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9BF18622F9DCC7009E47EB /* MainViewController.xib */; };
 		BDEF322F22F9B7CB00FEF8BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF322E22F9B7CB00FEF8BD /* AppDelegate.swift */; };
 		BDEF323722F9B7CB00FEF8BD /* ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDEF323522F9B7CB00FEF8BD /* ios.xcdatamodeld */; };
 		BDEF323922F9B7CB00FEF8BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDEF323822F9B7CB00FEF8BD /* Assets.xcassets */; };
@@ -93,11 +84,6 @@
 /* Begin PBXFileReference section */
 		2E35181820762A8F129B224F /* Pods-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.debug.xcconfig"; path = "Target Support Files/Pods-ios/Pods-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		52D603F7CA16A476BC383A78 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
-		BD75ABD72301B5F600E0FC7A /* NoticePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticePopUp.swift; sourceTree = "<group>"; };
-		BD75ABD92301B73400E0FC7A /* NoticePopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticePopUpDelegate.swift; sourceTree = "<group>"; };
-		BD75ABDB2301B7B500E0FC7A /* NoticePopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticePopUp.storyboard; sourceTree = "<group>"; };
-		BD75ABDD2301BCE600E0FC7A /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
-		BD75ABDF2301BE8200E0FC7A /* TutorialResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialResponse.swift; sourceTree = "<group>"; };
 		BD9BF17222F9C3D5009E47EB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BD9BF17422F9C494009E47EB /* CusomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusomIndicatorView.swift; sourceTree = "<group>"; };
 		BD9BF17722F9C6CF009E47EB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -105,10 +91,6 @@
 		BD9BF17B22F9C737009E47EB /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BD9BF17D22F9CD60009E47EB /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		BD9BF17F22F9CDEF009E47EB /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		BD9BF18122F9D1A4009E47EB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		BD9BF18222F9D1A4009E47EB /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		BD9BF18522F9DCC7009E47EB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BD9BF18622F9DCC7009E47EB /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		BDEF322B22F9B7CB00FEF8BD /* 에이블리.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "에이블리.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDEF322E22F9B7CB00FEF8BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDEF323622F9B7CB00FEF8BD /* ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios.xcdatamodel; sourceTree = "<group>"; };
@@ -207,53 +189,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD75ABD42301B3FB00E0FC7A /* PopUp */ = {
-			isa = PBXGroup;
-			children = (
-				BD75ABD72301B5F600E0FC7A /* NoticePopUp.swift */,
-				BD75ABD92301B73400E0FC7A /* NoticePopUpDelegate.swift */,
-				BD75ABDB2301B7B500E0FC7A /* NoticePopUp.storyboard */,
-			);
-			path = PopUp;
-			sourceTree = "<group>";
-		};
-		BD75ABD52301B40B00E0FC7A /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				BD75ABDD2301BCE600E0FC7A /* MainDataManager.swift */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
-		BD75ABD62301B42900E0FC7A /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				BD75ABDF2301BE8200E0FC7A /* TutorialResponse.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		BD9BF16F22F9C314009E47EB /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				BD75ABD62301B42900E0FC7A /* Entity */,
-				BD75ABD52301B40B00E0FC7A /* DataManager */,
-				BD75ABD42301B3FB00E0FC7A /* PopUp */,
-				BD9BF18522F9DCC7009E47EB /* MainViewController.swift */,
-				BD9BF18622F9DCC7009E47EB /* MainViewController.xib */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		BD9BF17022F9C318009E47EB /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				BD9BF18122F9D1A4009E47EB /* SplashViewController.swift */,
-				BD9BF18222F9D1A4009E47EB /* SplashViewController.xib */,
-			);
-			path = Splash;
-			sourceTree = "<group>";
-		};
 		BD9BF17122F9C31D009E47EB /* config */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,8 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				BD9BF17122F9C31D009E47EB /* config */,
-				BD9BF17022F9C318009E47EB /* Splash */,
-				BD9BF16F22F9C314009E47EB /* Main */,
 				C3B8EACB247D7E85003A56FD /* Home */,
 				C3B8EACC247D7E91003A56FD /* Style */,
 				C3B8EACE247D7EBE003A56FD /* Market */,
@@ -731,11 +664,8 @@
 				C3541F602483E1C80070149C /* FirstOptionViewController.xib in Resources */,
 				C3AD264C248161860053EB85 /* BestViewController.xib in Resources */,
 				C3541F76248439350070149C /* SecondOptionViewController.xib in Resources */,
-				BD9BF18422F9D1A4009E47EB /* SplashViewController.xib in Resources */,
 				C3B8EADC247D7F06003A56FD /* MarketViewController.xib in Resources */,
-				BD9BF18822F9DCC7009E47EB /* MainViewController.xib in Resources */,
 				C3541F652483E3CE0070149C /* SelectedProductTableViewCell.xib in Resources */,
-				BD75ABDC2301B7B500E0FC7A /* NoticePopUp.storyboard in Resources */,
 				C328252B247E1E30004985EC /* FavoriteItemViewController.xib in Resources */,
 				C3AD2642248150410053EB85 /* TodayCollectionViewCell.xib in Resources */,
 				C328252F247E1E3C004985EC /* FavoriteMarketViewController.xib in Resources */,
@@ -816,7 +746,6 @@
 				C328252E247E1E3C004985EC /* FavoriteMarketViewController.swift in Sources */,
 				BDEF323722F9B7CB00FEF8BD /* ios.xcdatamodeld in Sources */,
 				C352EE0A24826D9D00027E20 /* ProductInfoDataManager.swift in Sources */,
-				BD9BF18722F9DCC7009E47EB /* MainViewController.swift in Sources */,
 				C3AD2648248159E60053EB85 /* TodayDataManager.swift in Sources */,
 				BD9BF17822F9C6CF009E47EB /* UIColor.swift in Sources */,
 				C3B8EAD3247D7EEA003A56FD /* HomeViewController.swift in Sources */,
@@ -834,9 +763,7 @@
 				C3541F7124841C2B0070149C /* FirstOptionTableViewCell.swift in Sources */,
 				C356B57D24830D4B003AC048 /* LoginDataManager.swift in Sources */,
 				BD9BF17322F9C3D5009E47EB /* BaseViewController.swift in Sources */,
-				BD75ABDE2301BCE600E0FC7A /* MainDataManager.swift in Sources */,
 				C3B8EAC9247D7919003A56FD /* MyPageViewController.swift in Sources */,
-				BD75ABDA2301B73400E0FC7A /* NoticePopUpDelegate.swift in Sources */,
 				BD9BF17522F9C494009E47EB /* CusomIndicatorView.swift in Sources */,
 				BD9BF17A22F9C6FF009E47EB /* UIButton.swift in Sources */,
 				C3B8EAD7247D7EF8003A56FD /* StyleViewController.swift in Sources */,
@@ -844,11 +771,8 @@
 				C3B8EADF247D7F12003A56FD /* FavoriteViewController.swift in Sources */,
 				C3AD2641248150410053EB85 /* TodayCollectionViewCell.swift in Sources */,
 				BD9BF17C22F9C737009E47EB /* UIViewController.swift in Sources */,
-				BD75ABE02301BE8200E0FC7A /* TutorialResponse.swift in Sources */,
 				BDEF322F22F9B7CB00FEF8BD /* AppDelegate.swift in Sources */,
 				C3AD262C2481345F0053EB85 /* TodayViewController.swift in Sources */,
-				BD75ABD82301B5F600E0FC7A /* NoticePopUp.swift in Sources */,
-				BD9BF18322F9D1A4009E47EB /* SplashViewController.swift in Sources */,
 				C356B5722482E91A003AC048 /* RegisterResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

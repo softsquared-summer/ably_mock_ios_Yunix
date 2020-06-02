@@ -9,7 +9,7 @@
 import ObjectMapper
 
 struct RegisterResponse {
-    var result: RegisterResponseResult!
+    var result: String!
     var code: Int!
     var isSuccess: Bool!
     var message: String!
@@ -25,21 +25,6 @@ extension RegisterResponse: Mappable {
         code <- map["code"]
         isSuccess <- map["isSuccess"]
         message <- map["message"]
-    }
-    
-}
-
-struct RegisterResponseResult {
-    var jwt: String!
-}
-
-extension RegisterResponseResult: Mappable {
-    
-    init?(map: Map) {
-    }
-    
-    mutating func mapping(map: Map) {
-        jwt <- map["jwt"]
     }
     
 }

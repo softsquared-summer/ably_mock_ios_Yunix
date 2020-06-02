@@ -16,7 +16,7 @@ class MarketViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "5월 5주차 랭킹"
+        
     }
     /*
     // MARK: - Navigation

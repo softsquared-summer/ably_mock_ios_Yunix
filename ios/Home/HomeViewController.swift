@@ -15,7 +15,7 @@ class HomeViewController: BaseViewController {
 
     let searchController = UISearchController(searchResultsController: nil)
     
-    let searchBar = UISearchBar()
+    
     
     var todayViewController: TodayViewController!
 
@@ -47,46 +47,11 @@ class HomeViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        navigationController?.navigationBar.isHidden = true
-        navigationController?.navigationBar.topItem?.rightBarButtonItems = nil
-        
-        self.navigationController?.navigationBar.topItem?.title = nil
-        
-        searchBar.placeholder = "상품이나 마켓을 검색해보세요!"
-        searchBar.setValue("취소", forKey: "cancelButtonText")
-        searchBar.backgroundColor = UIColor(hex: 0xFFFFFF, alpha: 1)
-        searchBar.barTintColor = UIColor(hex: 0xFF0000, alpha: 1)
-        searchBar.showsCancelButton = true
-        
-        navigationController?.navigationBar.topItem?.titleView = searchBar
-        
-//        self.navigationController?.navigationBar.topItem?.searchController = searchController
-//
-//        searchController.hidesNavigationBarDuringPresentation = false
-//
-//        searchController.searchResultsUpdater = self
-//
-//        searchController.obscuresBackgroundDuringPresentation = false
-//
-//        searchController.searchBar.placeholder = "상품이나 마켓을 검색해보세요!"
-//
-//        definesPresentationContext = true
-//
-//        searchController.searchBar.setValue("취소", forKey: "cancelButtonText")
-//
-//        searchController.searchBar.tintColor = UIColor(hex: 0x777777, alpha: 1)
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.titleView = nil
         
-        let searchButton = UIBarButtonItem(image: UIImage.search?.resize(ratio: 0.4).withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
-        let shoppingCarButton = UIBarButtonItem(image: UIImage.shoppingCar?.resize(ratio: 0.4).withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
-        
-        self.navigationItem.rightBarButtonItems = [shoppingCarButton, searchButton]
-        
-//        navigationController?.navigationBar.isHidden = false
     }
     /*
     // MARK: - Navigation

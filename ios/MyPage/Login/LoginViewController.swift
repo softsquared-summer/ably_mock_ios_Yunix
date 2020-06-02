@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = UIColor(hex: 0x777777, alpha: 1)
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {

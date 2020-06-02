@@ -36,7 +36,7 @@ class FavoriteViewController: BaseViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "찜"
+        
     }
     /*
     // MARK: - Navigation

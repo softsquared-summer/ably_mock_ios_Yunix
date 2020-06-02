@@ -21,7 +21,7 @@ class RegisterDataManager {
                 case .success(let registerResponse):
                     if registerResponse.code == 100 {
                         print(registerResponse.message as Any)
-                        UserDefaults.standard.set(registerResponse.result.jwt, forKey: "USER_TOKEN")
+                        UserDefaults.standard.set(registerResponse.result, forKey: "USER_TOKEN")
                         inputUserInfoViewController.registerSuccess()
                     } else {
                         print("정보를 불러오는데 실패하였습니다.")
