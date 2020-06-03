@@ -22,6 +22,11 @@ class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var hotDealWidthConstraint: NSLayoutConstraint!
     @IBOutlet var hotDealConstraint: NSLayoutConstraint!
     @IBOutlet var favoriteButton: UIButton!
+    
+    @IBOutlet var heartTrailing: NSLayoutConstraint!
+    @IBOutlet var heartTop: NSLayoutConstraint!
+    @IBOutlet var heartHeigth: NSLayoutConstraint!
+    
     var data: [RecommendedProductResponseResult]!
     static let identifier: String = "TodayCollectionViewCell"
     var rootViewController: TodayViewController!
@@ -77,9 +82,15 @@ class TodayCollectionViewCell: UICollectionViewCell {
         }
         
         if isHeart {
-            favoriteButton.setImage(UIImage.favoritePink, for: .normal)
+            favoriteButton.setImage(UIImage.favoritePink!.resize(ratio: 0.5), for: .normal)
+            heartHeigth.constant = 20
+            heartTop.constant = 12.5
+            heartTrailing.constant = 12.5
         } else {
-            favoriteButton.setImage(UIImage.favoriteGray, for: .normal)
+            favoriteButton.setImage(UIImage.myHeartw, for: .normal)
+            heartHeigth.constant = 25
+            heartTop.constant = 10
+            heartTrailing.constant = 10
         }
         
         self.index = index
@@ -103,10 +114,16 @@ class TodayCollectionViewCell: UICollectionViewCell {
     func successHeart() {
         if rootViewController.recommendData[index].isMyHeart == "N" {
             rootViewController.recommendData[index].isMyHeart = "Y"
-            favoriteButton.setImage(UIImage.favoritePink, for: .normal)
+            favoriteButton.setImage(UIImage.favoritePink!.resize(ratio: 0.5), for: .normal)
+            heartHeigth.constant = 20
+            heartTop.constant = 12.5
+            heartTrailing.constant = 12.5
         } else {
             rootViewController.recommendData[index].isMyHeart = "N"
-            favoriteButton.setImage(UIImage.favoriteGray, for: .normal)
+            favoriteButton.setImage(UIImage.myHeartw, for: .normal)
+            heartHeigth.constant = 25
+            heartTop.constant = 10
+            heartTrailing.constant = 10
         }
     }
 }

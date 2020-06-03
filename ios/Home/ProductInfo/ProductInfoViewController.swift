@@ -29,12 +29,15 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet var saleLine: UIView!
     
     @IBOutlet var mainScrollView: UIScrollView!
+    @IBOutlet var imageTopConst: NSLayoutConstraint!
     
     var index: Int!
     var productInfoData: ProductInfoResponseResult?
     var currentIndex: Int!
     var scrollView: UIScrollView!
+    var isHeart = false
     
+    @IBOutlet var heartButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        navigationController?.navigationBar.snp.makeConstraints({ (make) in
@@ -138,6 +141,17 @@ class ProductInfoViewController: UIViewController {
         }
     }
     
+    @IBAction func pressedHeart(_ sender: Any) {
+        isHeart = !isHeart
+        
+        if isHeart {
+            heartButton.setImage(UIImage.myHeartf, for: .normal)
+        } else {
+            heartButton.setImage(UIImage.myHearte, for: .normal)
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -164,6 +178,12 @@ extension ProductInfoViewController: UIScrollViewDelegate {
                 alpha = (64/350) * ( 1 - (-height / 64) )
             } else if height > 0 {
                 alpha = (284/350) * (height / 284) + (64/350)
+            }
+            
+            if height < -64 {
+                self.imageTopConst.constant = height + 64
+            } else {
+                self.imageTopConst.constant = 0
             }
             
             navigationController?.navigationBar.backgroundColor = UIColor.white.withAlphaComponent(alpha)

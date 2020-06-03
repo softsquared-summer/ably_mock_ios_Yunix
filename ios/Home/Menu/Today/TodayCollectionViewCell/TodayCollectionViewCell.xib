@@ -63,13 +63,13 @@
                         <color key="textColor" red="0.99607843139999996" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="highlightedColor" red="0.99607843139999996" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0j-dK-IZx">
-                        <rect key="frame" x="428" y="54" width="24" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0j-dK-IZx">
+                        <rect key="frame" x="427" y="54" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="bjY-ai-WXc"/>
-                            <constraint firstAttribute="width" secondItem="D0j-dK-IZx" secondAttribute="height" multiplier="51:47" id="dRD-FB-94X"/>
+                            <constraint firstAttribute="height" constant="25" id="bjY-ai-WXc"/>
+                            <constraint firstAttribute="width" secondItem="D0j-dK-IZx" secondAttribute="height" id="f16-Zp-heC"/>
                         </constraints>
-                        <state key="normal" image="favoriteGray"/>
+                        <state key="normal" image="heartw"/>
                         <connections>
                             <action selector="pressedFavorite:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vMI-yI-ATs"/>
                         </connections>
@@ -104,6 +104,9 @@
             <connections>
                 <outlet property="countLabel" destination="c8J-vm-INU" id="340-PV-twM"/>
                 <outlet property="favoriteButton" destination="D0j-dK-IZx" id="V9G-lR-V7i"/>
+                <outlet property="heartHeigth" destination="bjY-ai-WXc" id="qOI-Uc-Q7U"/>
+                <outlet property="heartTop" destination="zGY-Fb-TcZ" id="Ut9-8Y-6Ej"/>
+                <outlet property="heartTrailing" destination="C3O-du-JeX" id="hgj-TE-I1u"/>
                 <outlet property="hotDealConstraint" destination="Mal-yw-gLm" id="5cf-fC-shC"/>
                 <outlet property="hotDealLabel" destination="WPi-y8-pqV" id="KXW-us-Ikg"/>
                 <outlet property="hotDealWidthConstraint" destination="sMb-of-CB2" id="KSa-Xf-8X3"/>
@@ -118,6 +121,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="favoriteGray" width="51" height="47"/>
+        <image name="heartw" width="55" height="50"/>
     </resources>
 </document>

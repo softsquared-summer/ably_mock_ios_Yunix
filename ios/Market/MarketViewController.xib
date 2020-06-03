@@ -39,11 +39,11 @@
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                         </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="l4b-8t-xr0">
-                                            <rect key="frame" x="99" y="23.5" width="20" height="13"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CloseBlack" translatesAutoresizingMaskIntoConstraints="NO" id="l4b-8t-xr0">
+                                            <rect key="frame" x="99" y="25" width="15" height="10"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="13" id="cxx-9K-03y"/>
-                                                <constraint firstAttribute="width" constant="20" id="wzs-Pt-HhB"/>
+                                                <constraint firstAttribute="height" constant="10" id="cxx-9K-03y"/>
+                                                <constraint firstAttribute="width" constant="15" id="wzs-Pt-HhB"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -101,6 +101,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Close" width="30" height="19"/>
+        <image name="CloseBlack" width="30" height="19"/>
     </resources>
 </document>

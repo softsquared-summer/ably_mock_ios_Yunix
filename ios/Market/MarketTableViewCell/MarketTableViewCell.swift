@@ -23,6 +23,10 @@ class MarketTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        mainImageView.kf.setImage(with: URL(string: imageList.randomElement()!))
+        firstSubImageView.kf.setImage(with: URL(string: imageList.randomElement()!))
+        secondSubImageView.kf.setImage(with: URL(string: imageList.randomElement()!))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

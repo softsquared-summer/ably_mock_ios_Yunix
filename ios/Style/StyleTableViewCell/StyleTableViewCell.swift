@@ -23,6 +23,10 @@ class StyleTableViewCell: UITableViewCell {
         newLabel.layer.borderWidth = 1
         newLabel.layer.cornerRadius = 7.5
         newLabel.layer.borderColor = UIColor(hex: 0xFE5160, alpha: 0.5).cgColor
+        
+        cellImage.kf.setImage(with: URL(string: imageList.randomElement()!))
+        cellImage.contentMode = .scaleAspectFill
+        cellImage.layer.zPosition = -1000
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

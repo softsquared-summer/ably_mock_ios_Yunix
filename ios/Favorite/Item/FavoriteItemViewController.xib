@@ -53,8 +53,8 @@
                                         <action selector="pressedAddDrawersButton:" destination="-1" eventType="touchUpInside" id="PnV-Df-nKB"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🗄   새로운 서랍 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-3r-t1t">
-                                    <rect key="frame" x="35" y="36" width="143" height="18"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 서랍 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-3r-t1t">
+                                    <rect key="frame" x="67" y="36" width="111.5" height="18"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -78,18 +78,27 @@
                                     <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DrawerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Yj4-mx-D5C">
+                                    <rect key="frame" x="30" y="36.5" width="22" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Yj4-mx-D5C" secondAttribute="height" multiplier="43:33" id="DI4-3z-A8D"/>
+                                        <constraint firstAttribute="height" constant="17" id="MtQ-iK-C5d"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="BaC-3o-pHR" firstAttribute="leading" secondItem="WRJ-Bk-OXt" secondAttribute="leading" constant="20" id="0dq-gA-erS"/>
-                                <constraint firstItem="aqZ-3r-t1t" firstAttribute="leading" secondItem="0ds-JY-WeL" secondAttribute="leading" constant="20" id="1NZ-ck-7K2"/>
                                 <constraint firstAttribute="bottom" secondItem="BaC-3o-pHR" secondAttribute="bottom" id="2K1-Ob-jJg"/>
                                 <constraint firstItem="BaC-3o-pHR" firstAttribute="top" secondItem="0ds-JY-WeL" secondAttribute="bottom" constant="15" id="3zm-pF-esk"/>
                                 <constraint firstItem="XzE-6W-MX2" firstAttribute="trailing" secondItem="0ds-JY-WeL" secondAttribute="trailing" constant="-20" id="Fpb-z1-3vP"/>
+                                <constraint firstItem="Yj4-mx-D5C" firstAttribute="centerY" secondItem="aqZ-3r-t1t" secondAttribute="centerY" id="Ll2-tA-OQ4"/>
+                                <constraint firstItem="aqZ-3r-t1t" firstAttribute="leading" secondItem="Yj4-mx-D5C" secondAttribute="trailing" constant="15" id="OSB-GE-aq8"/>
                                 <constraint firstItem="0ds-JY-WeL" firstAttribute="top" secondItem="WRJ-Bk-OXt" secondAttribute="top" constant="15" id="Qbo-ws-bU5"/>
                                 <constraint firstItem="0ds-JY-WeL" firstAttribute="leading" secondItem="WRJ-Bk-OXt" secondAttribute="leading" constant="15" id="VMw-yc-ziN"/>
                                 <constraint firstItem="XzE-6W-MX2" firstAttribute="centerY" secondItem="0ds-JY-WeL" secondAttribute="centerY" id="Yg0-4t-ZHu"/>
                                 <constraint firstAttribute="trailing" secondItem="BaC-3o-pHR" secondAttribute="trailing" constant="20" id="neW-21-hcX"/>
+                                <constraint firstItem="Yj4-mx-D5C" firstAttribute="leading" secondItem="0ds-JY-WeL" secondAttribute="leading" constant="15" id="p76-SH-GUu"/>
                                 <constraint firstItem="aqZ-3r-t1t" firstAttribute="centerY" secondItem="0ds-JY-WeL" secondAttribute="centerY" id="sfy-H7-P9G"/>
                                 <constraint firstAttribute="trailing" secondItem="0ds-JY-WeL" secondAttribute="trailing" constant="15" id="t6n-6n-b0D"/>
                             </constraints>
@@ -119,4 +128,7 @@
             <point key="canvasLocation" x="286" y="89"/>
         </view>
     </objects>
+    <resources>
+        <image name="DrawerIcon" width="43" height="33"/>
+    </resources>
 </document>

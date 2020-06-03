@@ -25,7 +25,7 @@ class FavoriteItemInfoCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        imageView.kf.setImage(with: URL(string: imageList.randomElement()!))
         imageView.layer.cornerRadius = 5
     }
 

@@ -14,7 +14,9 @@
                 <outlet property="couponLabel" destination="P9a-Ww-RqJ" id="zvT-ID-0Tg"/>
                 <outlet property="discountLabel" destination="XOc-r8-vyy" id="Xux-5E-gPd"/>
                 <outlet property="displayPrice" destination="Upf-Dt-NPf" id="vht-ef-yB6"/>
+                <outlet property="heartButton" destination="TDg-O9-86u" id="PbM-T4-9dl"/>
                 <outlet property="imagePageControl" destination="bRw-xi-Thq" id="4x2-W3-fAA"/>
+                <outlet property="imageTopConst" destination="Uis-lO-O9k" id="3dG-Gt-BRW"/>
                 <outlet property="mainScrollView" destination="94o-i9-uhS" id="tbh-rb-Ztr"/>
                 <outlet property="marketHashTag" destination="j1m-Yv-qr6" id="oxS-kf-VSg"/>
                 <outlet property="marketImage" destination="3RL-rr-lhz" id="wyf-iu-3Wg"/>
@@ -313,6 +315,9 @@
                                 <constraint firstAttribute="width" secondItem="TDg-O9-86u" secondAttribute="height" multiplier="1:0.9" id="dCD-9R-44n"/>
                             </constraints>
                             <state key="normal" image="Favorite"/>
+                            <connections>
+                                <action selector="pressedHeart:" destination="-1" eventType="touchUpInside" id="wJ0-lW-1O5"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61E-v0-zhx" customClass="PMSuperButton" customModule="PMSuperButton">
                             <rect key="frame" x="66.666666666666657" y="15" width="327.33333333333337" height="60"/>

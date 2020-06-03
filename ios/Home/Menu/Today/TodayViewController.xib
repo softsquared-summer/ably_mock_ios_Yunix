@@ -91,9 +91,13 @@
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                         </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.grid.2x2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-0q-YhB">
-                                            <rect key="frame" x="30" y="21" width="60" height="17.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-0q-YhB">
+                                            <rect key="frame" x="43" y="22.5" width="15" height="15"/>
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Ioi-0q-YhB" secondAttribute="height" id="tFN-GM-uiM"/>
+                                                <constraint firstAttribute="height" constant="15" id="ydf-9c-4bi"/>
+                                            </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg5-Hv-Zx3">
                                             <rect key="frame" x="187" y="0.0" width="197" height="60"/>
@@ -102,28 +106,28 @@
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                         </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-cf-zMG">
-                                            <rect key="frame" x="212" y="19" width="60" height="19.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-cf-zMG">
+                                            <rect key="frame" x="223" y="22.5" width="15" height="15"/>
                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="T4q-cf-zMG" secondAttribute="height" id="vZj-wo-55U"/>
+                                                <constraint firstAttribute="height" constant="15" id="w1g-h2-J3U"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
-                                        <constraint firstItem="Ioi-0q-YhB" firstAttribute="centerY" secondItem="OHS-Nz-xic" secondAttribute="centerY" id="09X-ta-ofH"/>
-                                        <constraint firstItem="T4q-cf-zMG" firstAttribute="centerY" secondItem="Gg5-Hv-Zx3" secondAttribute="centerY" id="1h9-5z-7UD"/>
                                         <constraint firstItem="o6C-im-pqZ" firstAttribute="centerX" secondItem="SVK-9f-YRE" secondAttribute="centerX" id="5VA-PE-FNy"/>
+                                        <constraint firstItem="Ioi-0q-YhB" firstAttribute="leading" secondItem="SVK-9f-YRE" secondAttribute="leading" constant="43" id="9TI-Wv-9Wc"/>
                                         <constraint firstAttribute="bottom" secondItem="OHS-Nz-xic" secondAttribute="bottom" id="Bxf-lt-ls3"/>
-                                        <constraint firstItem="T4q-cf-zMG" firstAttribute="width" secondItem="Gg5-Hv-Zx3" secondAttribute="height" id="IjU-s3-7TR"/>
-                                        <constraint firstItem="OHS-Nz-xic" firstAttribute="leading" secondItem="Ioi-0q-YhB" secondAttribute="trailing" constant="-90" id="KWQ-rE-VHD"/>
+                                        <constraint firstItem="T4q-cf-zMG" firstAttribute="leading" secondItem="o6C-im-pqZ" secondAttribute="trailing" constant="28" id="HL4-l9-sVx"/>
                                         <constraint firstAttribute="height" constant="60" id="SVm-13-59T"/>
                                         <constraint firstItem="o6C-im-pqZ" firstAttribute="centerY" secondItem="SVK-9f-YRE" secondAttribute="centerY" id="TX8-95-tri"/>
-                                        <constraint firstItem="Ioi-0q-YhB" firstAttribute="width" secondItem="OHS-Nz-xic" secondAttribute="height" id="Vf7-rQ-zdY"/>
                                         <constraint firstAttribute="trailing" secondItem="Gg5-Hv-Zx3" secondAttribute="trailing" id="ZeP-tX-bGY"/>
                                         <constraint firstItem="o6C-im-pqZ" firstAttribute="leading" secondItem="OHS-Nz-xic" secondAttribute="trailing" id="a8k-hZ-VTq"/>
-                                        <constraint firstItem="T4q-cf-zMG" firstAttribute="height" secondItem="Gg5-Hv-Zx3" secondAttribute="height" multiplier="0.33" id="aOF-KD-Kqh"/>
-                                        <constraint firstItem="Ioi-0q-YhB" firstAttribute="height" secondItem="OHS-Nz-xic" secondAttribute="height" multiplier="0.33" id="gjl-sx-Jjp"/>
-                                        <constraint firstItem="Gg5-Hv-Zx3" firstAttribute="leading" secondItem="T4q-cf-zMG" secondAttribute="trailing" constant="-85" id="htz-fv-oKF"/>
+                                        <constraint firstItem="T4q-cf-zMG" firstAttribute="centerY" secondItem="Gg5-Hv-Zx3" secondAttribute="centerY" id="bHW-pA-kOX"/>
                                         <constraint firstItem="Gg5-Hv-Zx3" firstAttribute="leading" secondItem="o6C-im-pqZ" secondAttribute="trailing" constant="-8" id="iWW-dP-WDL"/>
+                                        <constraint firstItem="Ioi-0q-YhB" firstAttribute="centerY" secondItem="OHS-Nz-xic" secondAttribute="centerY" id="jnc-Os-f4p"/>
                                         <constraint firstItem="Gg5-Hv-Zx3" firstAttribute="top" secondItem="SVK-9f-YRE" secondAttribute="top" id="pML-EL-95r"/>
                                         <constraint firstAttribute="bottom" secondItem="Gg5-Hv-Zx3" secondAttribute="bottom" id="uMf-Wv-BEu"/>
                                         <constraint firstItem="OHS-Nz-xic" firstAttribute="leading" secondItem="SVK-9f-YRE" secondAttribute="leading" id="vKJ-Qz-m8v"/>
@@ -221,7 +225,7 @@
         </view>
     </objects>
     <resources>
-        <image name="gift" catalog="system" width="128" height="121"/>
-        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
+        <image name="gift" width="28" height="31"/>
+        <image name="table" width="30" height="30"/>
     </resources>
 </document>
