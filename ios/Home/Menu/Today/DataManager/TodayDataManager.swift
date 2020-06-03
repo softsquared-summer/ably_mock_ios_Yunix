@@ -22,13 +22,9 @@ class TodayDataManager {
                     if recommendedProductResponse.code == 100 {
                         print(recommendedProductResponse.message as Any)
                         todayViewController.recommendData += recommendedProductResponse.result
-                        let cellCount = Double(recommendedProductResponse.result.count)
-//                        todayViewController.collectionViewHeight.constant = CGFloat(310 * ceil(cellCount / 2))
                         todayViewController.collectionView.reloadData()
-//                        todayViewController.isWaiting = !todayViewController.isWaiting
                     } else {
                         print("정보를 불러오는데 실패하였습니다.")
-                        print(recommendedProductResponse.message)
                     }
                 case .failure:
                     print("서버와의 연결이 원활하지 않습니다.")

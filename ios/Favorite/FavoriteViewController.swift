@@ -47,8 +47,11 @@ class FavoriteViewController: BaseViewController {
         
         menuView.reloadData(options: options)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
+        if !(userToken == nil) {
+            DrawersDataManager().getDrawers(favoriteItemViewController)
+        }
         
     }
     /*
@@ -89,6 +92,7 @@ extension FavoriteViewController: SwipeMenuViewDelegate, SwipeMenuViewDataSource
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewWillSetupAt currentIndex: Int) {
            if currentIndex == 0 {
                favoriteItemViewController.rootViewController = self
+            
            }
        }
 }

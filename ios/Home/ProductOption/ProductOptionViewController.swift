@@ -21,6 +21,8 @@ class ProductOptionViewController: UIViewController {
     @IBOutlet var itemCount: UILabel!
     @IBOutlet var itemPrice: UILabel!
     @IBOutlet var priceView: PMSuperButton!
+    var rootViewController: ProductInfoViewController!
+    var result: [ProductOptionResponseResult]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,5 +63,14 @@ class ProductOptionViewController: UIViewController {
     */
     func receiveData(result: [ProductOptionResponseResult], firstOptionList: [String]!, optionDictionary: [String : [String]]!) {
         contentInputView.receiveData(rootViewController: self, result: result, firstOptionList: firstOptionList, optionDictionary: optionDictionary)
+        self.result = result
+    }
+    
+    @IBAction func pressedPurchase(_ sender: Any) {
+        let nextViewController = OrderViewController()
+        nextViewController.doneItem(data: itemList, price: itemPrice.text, count: itemCount.text, result: self.result, index: self.currentIndex)
+        self.dismiss(animated: false, completion: nil)
+        rootViewController.navigationController?.setNavigationBarHidden(false, animated: false)
+        rootViewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

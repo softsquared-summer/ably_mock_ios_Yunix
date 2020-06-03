@@ -14,6 +14,9 @@ class FavoriteItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet var slotImage: UIImageView!
     @IBOutlet var slotNameLabel: UILabel!
     @IBOutlet var slotCountLabel: UILabel!
+    var rootViewController: FavoriteItemViewController!
+    var index: Int!
+    var indexPath: IndexPath!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +31,17 @@ class FavoriteItemCollectionViewCell: UICollectionViewCell {
         slotNameLabel.text = data[1]
         slotCountLabel.text = data[2]
         }
+    }
+    
+    func updateDrawersUI(data: DrawersResponseResult, indexPath: IndexPath) {
+        self.index = data.drawerIdx
+        self.indexPath = indexPath
+        slotImage.kf.setImage(with: URL(string: data.thumbnailUrl[0]))
+        slotNameLabel.text = data.drawerName
+        slotCountLabel.text = data.productCnt
+    }
+    
+    @IBAction func pressedSettingButton(_ sender: Any) {
+        rootViewController.editDrawers(index: index, string: slotNameLabel.text!, indexPath: indexPath)
     }
 }

@@ -109,7 +109,7 @@ class ProductInfoViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func recieveInfo(_ index: Int, _ todayViewController: TodayViewController) {
@@ -117,15 +117,25 @@ class ProductInfoViewController: UIViewController {
     }
 
     @IBAction func pressedPurchase(_ sender: Any) {
-        let productOptionStoryboard = UIStoryboard(name: "ProductOption", bundle: Bundle.main)
-        guard let productOption = productOptionStoryboard
-            .instantiateViewController(withIdentifier: "ProductOption") as? ProductOptionViewController else {
-            return
+        if !(userToken == nil) {
+            let productOptionStoryboard = UIStoryboard(name: "ProductOption", bundle: Bundle.main)
+            guard let productOption = productOptionStoryboard
+                .instantiateViewController(withIdentifier: "ProductOption") as? ProductOptionViewController else {
+                return
+            }
+            productOption.rootViewController = self
+            productOption.modalPresentationStyle = .custom
+            productOption.modalTransitionStyle = .crossDissolve
+            productOption.currentIndex = currentIndex
+            self.present(productOption, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "로그인이 필요한 기능입니다.", message: nil, preferredStyle: .alert)
+            let actionOkay = UIAlertAction(title: "확인", style: .default, handler: nil)
+            
+            alert.addAction(actionOkay)
+
+            self.present(alert, animated: true, completion: nil)
         }
-        productOption.modalPresentationStyle = .custom
-        productOption.modalTransitionStyle = .crossDissolve
-        productOption.currentIndex = currentIndex
-        self.present(productOption, animated: true, completion: nil)
     }
     
     /*

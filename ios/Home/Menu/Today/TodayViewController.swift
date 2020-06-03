@@ -31,7 +31,9 @@ class TodayViewController: BaseViewController {
     var refreshControl = UIRefreshControl()
 
     @objc func refresh(_ sender: AnyObject) {
-        collectionView.reloadData()
+        currentPage = 1
+        recommendData = []
+        TodayDataManager().getRecommendedProduct(self, currentPage)
         refreshControl.endRefreshing()
     }
     override func viewDidLoad() {
@@ -147,7 +149,7 @@ extension TodayViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        ProductInfoDataManager().getProductInfo(index: indexPath.row + 1, todayViewController: self)
+        ProductInfoDataManager().getProductInfo(index: recommendData[indexPath.row].index, todayViewController: self)
         
     }
     

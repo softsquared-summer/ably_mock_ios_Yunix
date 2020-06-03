@@ -13,6 +13,7 @@ class ProductInfoDataManager {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     func getProductInfo(index: Int, todayViewController: TodayViewController) {
+        print("\(self.appDelegate.baseUrl)/products/\(index)")
         Alamofire
             .request("\(self.appDelegate.baseUrl)/products/\(index)", method: .get)
             .validate()

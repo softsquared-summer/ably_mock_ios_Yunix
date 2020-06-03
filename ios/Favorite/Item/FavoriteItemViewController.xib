@@ -49,6 +49,9 @@
                                             <real key="value" value="10"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="pressedAddDrawersButton:" destination="-1" eventType="touchUpInside" id="PnV-Df-nKB"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🗄   새로운 서랍 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-3r-t1t">
                                     <rect key="frame" x="35" y="36" width="143" height="18"/>

@@ -89,6 +89,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="pressedPurchase:" destination="qea-QR-Ces" eventType="touchUpInside" id="HWe-4I-LvP"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4Y-lB-Fqu" customClass="PMSuperButton" customModule="PMSuperButton">
                                                         <rect key="frame" x="20" y="15" width="179.5" height="60"/>

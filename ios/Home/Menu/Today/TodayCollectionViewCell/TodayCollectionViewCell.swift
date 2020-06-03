@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 
 class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
@@ -21,7 +22,7 @@ class TodayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var hotDealWidthConstraint: NSLayoutConstraint!
     @IBOutlet var hotDealConstraint: NSLayoutConstraint!
     @IBOutlet var favoriteButton: UIButton!
-    
+    var data: [RecommendedProductResponseResult]!
     static let identifier: String = "TodayCollectionViewCell"
     var rootViewController: TodayViewController!
     var index: Int!
@@ -38,7 +39,7 @@ class TodayCollectionViewCell: UICollectionViewCell {
     
     func updateUI(_ data: [RecommendedProductResponseResult], index: Int, rootViewController: TodayViewController) {
         self.rootViewController = rootViewController
-        
+        self.data = data
         let isNotHotDeal = !(data[index].isHotDeal == "N")
         let isNotSale = data[index].sale == "0%"
         let isCount = data[index].count == nil
@@ -84,7 +85,22 @@ class TodayCollectionViewCell: UICollectionViewCell {
         self.index = index
         
     }
+    
     @IBAction func pressedFavorite(_ sender: Any) {
+        if !(userToken == nil) {
+            MyHeartDataManager().postMyHeart(self, data[self.index].index)
+        } else {
+            let alert = UIAlertController(title: "로그인이 필요한 기능입니다.", message: nil, preferredStyle: .alert)
+            let actionOkay = UIAlertAction(title: "확인", style: .default, handler: nil)
+            
+            alert.addAction(actionOkay)
+
+            rootViewController.present(alert, animated: true, completion: nil)
+        }
+    
+    }
+    
+    func successHeart() {
         if rootViewController.recommendData[index].isMyHeart == "N" {
             rootViewController.recommendData[index].isMyHeart = "Y"
             favoriteButton.setImage(UIImage.favoritePink, for: .normal)
