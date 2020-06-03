@@ -13,6 +13,11 @@ class StyleViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var data: [[String]]?
+    var refreshControl = UIRefreshControl()
+
+       @objc func refresh(_ sender: AnyObject) {
+           refreshControl.endRefreshing()
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,10 @@ class StyleViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl.layer.zPosition = -1000
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         
         let styleTableViewCell = UINib(nibName: StyleTableViewCell.identifier, bundle: nil)
         tableView.register(styleTableViewCell, forCellReuseIdentifier: StyleTableViewCell.identifier)

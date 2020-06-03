@@ -12,11 +12,22 @@ import SwipeMenuViewController
 class FavoriteItemViewController: UIViewController {
     @IBOutlet var contentView: UIView!
     
-    var mainViewController: FavoriteViewController!
+    var rootViewController: FavoriteViewController!
+    @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        let favoriteItemCollectionViewCell = UINib(nibName: FavoriteItemCollectionViewCell.identifier, bundle: nil)
+               collectionView.register(favoriteItemCollectionViewCell, forCellWithReuseIdentifier: FavoriteItemCollectionViewCell.identifier)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.isScrollEnabled = false
+        
+//        contentView.addSubview(collectionView)
     }
 
 
@@ -30,4 +41,26 @@ class FavoriteItemViewController: UIViewController {
     }
     */
 
+}
+
+extension FavoriteItemViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteItemCollectionViewCell.identifier, for: indexPath) as? FavoriteItemCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.updateUI()
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
 }

@@ -31,6 +31,9 @@ class TodayCollectionViewCell: UICollectionViewCell {
         // Initialization code
         hotDealLabel.layer.borderWidth = 1
         hotDealLabel.layer.borderColor = UIColor(hex: 0xFE5160, alpha: 1).cgColor
+        
+       
+        
     }
     
     func updateUI(_ data: [RecommendedProductResponseResult], index: Int, rootViewController: TodayViewController) {

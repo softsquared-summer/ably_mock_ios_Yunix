@@ -12,6 +12,12 @@ class MarketViewController: UIViewController {
 
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
     @IBOutlet var tableView: UITableView!
+    
+    var refreshControl = UIRefreshControl()
+
+    @objc func refresh(_ sender: AnyObject) {
+        refreshControl.endRefreshing()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,6 +33,10 @@ class MarketViewController: UIViewController {
         tableView.isScrollEnabled = false
         
         tableViewHeight.constant = 1750
+        
+        refreshControl.layer.zPosition = -1000
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
     }
 
     override func viewWillAppear(_ animated: Bool) {

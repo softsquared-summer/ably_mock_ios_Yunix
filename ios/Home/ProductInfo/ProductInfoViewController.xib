@@ -308,14 +308,14 @@
                     <rect key="frame" x="0.0" y="772" width="414" height="90"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-O9-86u">
-                            <rect key="frame" x="20" y="27" width="40" height="36"/>
+                            <rect key="frame" x="20" y="26" width="26.666666666666671" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="TDg-O9-86u" secondAttribute="height" multiplier="1:0.9" id="dCD-9R-44n"/>
                             </constraints>
                             <state key="normal" image="Favorite"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61E-v0-zhx" customClass="PMSuperButton" customModule="PMSuperButton">
-                            <rect key="frame" x="80" y="15" width="314" height="60"/>
+                            <rect key="frame" x="66.666666666666657" y="15" width="327.33333333333337" height="60"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <state key="normal" title="구매하기">
@@ -333,14 +333,22 @@
                                 <action selector="pressedPurchase:" destination="-1" eventType="touchUpInside" id="jFD-6M-Xfb"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUl-NK-gYQ">
+                            <rect key="frame" x="23" y="55" width="21" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.99607843139999996" green="0.31764705879999999" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="TDg-O9-86u" firstAttribute="height" secondItem="61E-v0-zhx" secondAttribute="height" multiplier="0.6" id="1P2-sD-ra2"/>
+                        <constraint firstItem="TDg-O9-86u" firstAttribute="height" secondItem="61E-v0-zhx" secondAttribute="height" multiplier="0.4" id="1P2-sD-ra2"/>
                         <constraint firstItem="61E-v0-zhx" firstAttribute="top" secondItem="Rbi-Of-wiL" secondAttribute="top" constant="15" id="49k-4R-d9J"/>
-                        <constraint firstItem="TDg-O9-86u" firstAttribute="centerY" secondItem="Rbi-Of-wiL" secondAttribute="centerY" id="74x-QW-vNi"/>
+                        <constraint firstItem="TDg-O9-86u" firstAttribute="centerY" secondItem="Rbi-Of-wiL" secondAttribute="centerY" constant="-7" id="74x-QW-vNi"/>
                         <constraint firstItem="TDg-O9-86u" firstAttribute="leading" secondItem="Rbi-Of-wiL" secondAttribute="leading" constant="20" id="AyQ-nr-YGg"/>
+                        <constraint firstItem="bUl-NK-gYQ" firstAttribute="centerX" secondItem="TDg-O9-86u" secondAttribute="centerX" id="YyX-Jv-aa2"/>
                         <constraint firstItem="61E-v0-zhx" firstAttribute="leading" secondItem="TDg-O9-86u" secondAttribute="trailing" constant="20" id="ZQb-Ho-nny"/>
+                        <constraint firstItem="bUl-NK-gYQ" firstAttribute="top" secondItem="TDg-O9-86u" secondAttribute="bottom" constant="5" id="dxf-n6-fkU"/>
                         <constraint firstAttribute="bottom" secondItem="61E-v0-zhx" secondAttribute="bottom" constant="15" id="jfp-uM-wZQ"/>
                         <constraint firstAttribute="height" constant="90" id="ncE-ck-qTq"/>
                         <constraint firstAttribute="trailing" secondItem="61E-v0-zhx" secondAttribute="trailing" constant="20" id="zSU-Ts-Cjv"/>

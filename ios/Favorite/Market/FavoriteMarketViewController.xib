@@ -19,20 +19,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-T2-xvp">
-                    <rect key="frame" x="186" y="442.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FavoriteMarketScreen" translatesAutoresizingMaskIntoConstraints="NO" id="3SY-a8-arI">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="ldc-T2-xvp" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="7Ef-PI-2e0"/>
-                <constraint firstItem="ldc-T2-xvp" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="gzQ-aI-3Ed"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3SY-a8-arI" secondAttribute="trailing" id="OHa-UO-5Op"/>
+                <constraint firstItem="3SY-a8-arI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TWO-Zy-XFW"/>
+                <constraint firstItem="3SY-a8-arI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WJW-9r-r6h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3SY-a8-arI" secondAttribute="bottom" id="mqI-25-GMT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="100"/>
         </view>
     </objects>
+    <resources>
+        <image name="FavoriteMarketScreen" width="750" height="1013"/>
+    </resources>
 </document>

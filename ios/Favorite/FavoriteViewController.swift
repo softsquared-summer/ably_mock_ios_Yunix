@@ -11,10 +11,23 @@ import SwipeMenuViewController
 
 class FavoriteViewController: BaseViewController {
     @IBOutlet var menuView: SwipeMenuView!
+    
+    var refreshControl = UIRefreshControl()
 
+    @objc func refresh(_ sender: AnyObject) {
+        refreshControl.endRefreshing()
+    }
+    
+    var favoriteItemViewController: FavoriteItemViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        favoriteItemViewController = FavoriteItemViewController()
         // Do any additional setup after loading the view.
+        refreshControl.layer.zPosition = -1000
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        
         menuView.dataSource = self
         menuView.delegate = self
         
@@ -67,9 +80,16 @@ extension FavoriteViewController: SwipeMenuViewDelegate, SwipeMenuViewDataSource
 
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
         if index == 0 {
-            return FavoriteItemViewController()
+            return favoriteItemViewController
         } else {
             return FavoriteMarketViewController()
         }
     }
+    
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewWillSetupAt currentIndex: Int) {
+           if currentIndex == 0 {
+               favoriteItemViewController.rootViewController = self
+           }
+       }
 }
+

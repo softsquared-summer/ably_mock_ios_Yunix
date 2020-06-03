@@ -18,7 +18,7 @@ class TodayViewController: BaseViewController {
     @IBOutlet var currentPageLabel: UILabel!
     @IBOutlet var totalPageLabel: UILabel!
     @IBOutlet var collectionViewHeight: NSLayoutConstraint!
-    
+
     var isWaiting: Bool = false
     var recommendData: [RecommendedProductResponseResult] = []
     var rootViewController: HomeViewController!
@@ -28,7 +28,12 @@ class TodayViewController: BaseViewController {
     var bannerData: [BannerResponseResult]!
     var index: Int!
     var currentPage: Int = 1
-    
+    var refreshControl = UIRefreshControl()
+
+    @objc func refresh(_ sender: AnyObject) {
+        collectionView.reloadData()
+        refreshControl.endRefreshing()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,8 +43,10 @@ class TodayViewController: BaseViewController {
             userNameLabel.text = "회원"
         }
         mainScrollView.delegate = self
-        
-        
+        refreshControl.layer.zPosition = -1000
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        mainScrollView.addSubview(refreshControl) // not required when using UITableViewController
 //        imagePageControl.layer.zPosition = contentView.layer.zPosition + 1
         
 //        collectionView = UICollectionView(frame: contentView.bounds)
@@ -92,6 +99,11 @@ class TodayViewController: BaseViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+    }
+    
+    func loadMoreCollectionView() {
+        currentPage += 1
+        TodayDataManager().getRecommendedProduct(self, currentPage)
     }
     
     func moveProductInfoViewController(data: ProductInfoResponseResult, index: Int) {
@@ -153,6 +165,13 @@ extension TodayViewController: UIScrollViewDelegate {
         
         if scrollView == self.mainScrollView {
             rootViewController.navigationController?.setNavigationBarHidden((scrollView.contentOffset.y >= 10), animated: true)
+            
+            if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+                //bottom reached
+                collectionViewHeight.constant += 310 * 5
+                currentPage += 1
+                TodayDataManager().getRecommendedProduct(self, currentPage)
+            }
         }
     }
 }

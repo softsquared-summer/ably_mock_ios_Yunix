@@ -9,6 +9,14 @@
 import UIKit
 
 class NewViewController: BaseViewController {
+    
+    var isWaiting: Bool = false
+    var recommendData: [NewBestResponseResult] = []
+    var rootViewController: HomeViewController!
+    var isScrolling: Bool = false
+    var index: Int!
+    var currentPage: Int = 1
+    var refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
