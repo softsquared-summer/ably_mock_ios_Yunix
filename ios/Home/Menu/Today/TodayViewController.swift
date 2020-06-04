@@ -19,6 +19,7 @@ class TodayViewController: BaseViewController {
     @IBOutlet var totalPageLabel: UILabel!
     @IBOutlet var collectionViewHeight: NSLayoutConstraint!
 
+    var isNavigationBar: Bool = true
     var isWaiting: Bool = false
     var recommendData: [RecommendedProductResponseResult] = []
     var rootViewController: HomeViewController!
@@ -39,11 +40,7 @@ class TodayViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if !(userToken == "") {
-            userNameLabel.text = userName
-        } else {
-            userNameLabel.text = "회원"
-        }
+        
         mainScrollView.delegate = self
         refreshControl.layer.zPosition = -1000
         refreshControl.attributedTitle = NSAttributedString(string: "")
@@ -96,7 +93,8 @@ class TodayViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -167,6 +165,8 @@ extension TodayViewController: UIScrollViewDelegate {
         
         if scrollView == self.mainScrollView {
             rootViewController.navigationController?.setNavigationBarHidden((scrollView.contentOffset.y >= 10), animated: true)
+                isNavigationBar = !(scrollView.contentOffset.y >= 10)
+
             
             if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
                 //bottom reached

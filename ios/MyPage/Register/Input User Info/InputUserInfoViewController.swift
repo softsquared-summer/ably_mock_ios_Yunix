@@ -32,8 +32,8 @@ class InputUserInfoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        
+        self.navigationItem.title = "회원가입"
+
         allCheckImage.isHidden = true
         serviceCheckImage.isHidden = true
         privateCheckImage.isHidden = true
@@ -45,14 +45,12 @@ class InputUserInfoViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.topItem?.title = "가입하기"
-        navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = UIColor(hex: 0x777777, alpha: 1)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.topItem?.title = nil
-        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
     
      func showDatePicker(){

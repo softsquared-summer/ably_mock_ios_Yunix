@@ -13,6 +13,9 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .black
+        navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
     }
     
     
@@ -22,6 +25,7 @@ class RegisterViewController: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+        
     }
 
     @IBAction func pressedRegisterWithEmail(_ sender: Any) {

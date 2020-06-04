@@ -31,6 +31,7 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet var mainScrollView: UIScrollView!
     @IBOutlet var imageTopConst: NSLayoutConstraint!
     
+    var currentAlpha: CGFloat = 0
     var index: Int!
     var productInfoData: ProductInfoResponseResult?
     var currentIndex: Int!
@@ -43,6 +44,8 @@ class ProductInfoViewController: UIViewController {
 //        navigationController?.navigationBar.snp.makeConstraints({ (make) in
 //            make.top.equalTo(self.view.superview?.snp.top as! ConstraintRelatableTarget)
 //        })
+        self.navigationItem.title = "상품 정보"
+        
         navigationController?.navigationBar.backgroundColor = .clear
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
@@ -108,10 +111,15 @@ class ProductInfoViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController!.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 160.0)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black.withAlphaComponent(currentAlpha)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black.withAlphaComponent(1)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
 //        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -187,6 +195,11 @@ extension ProductInfoViewController: UIScrollViewDelegate {
             }
             
             navigationController?.navigationBar.backgroundColor = UIColor.white.withAlphaComponent(alpha)
+            
+            let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black.withAlphaComponent(alpha)]
+            navigationController?.navigationBar.titleTextAttributes = textAttributes
+            
+            currentAlpha = alpha
         }
         
     }

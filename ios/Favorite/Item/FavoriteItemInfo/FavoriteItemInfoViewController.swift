@@ -14,6 +14,7 @@ class FavoriteItemInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "기본 서랍"
         
         let nib = UINib(nibName: FavoriteItemInfoCollectionViewCell.identifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: FavoriteItemInfoCollectionViewCell.identifier)

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwipeMenuViewController
 
 class LoginViewController: UIViewController {
 
@@ -16,20 +17,19 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        passwordTextfield.isSecureTextEntry = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "이메일로 로그인하기"
-        navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
+        self.navigationItem.title = "이메일로 로그인하기"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = UIColor(hex: 0x777777, alpha: 1)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.topItem?.title = nil
-        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        
     }
     
     @IBAction func pressedLogin(_ sender: Any) {
@@ -40,6 +40,9 @@ class LoginViewController: UIViewController {
     }
     
     func loginSuccess() {
+        userToken = UserDefaults.standard.string(forKey: "USER_TOKEN")
+        userName = UserDefaults.standard.string(forKey: "USER_NAME")
+        
         let alert = UIAlertController(title: "로그인 성공", message: "안녕하세요 \(String(UserDefaults.standard.string(forKey: "USER_NAME")!))님", preferredStyle: .alert)
         let actionOkay = UIAlertAction(title: "확인", style: .default) { (action) in
             self.navigationController?.popViewController(animated: true)

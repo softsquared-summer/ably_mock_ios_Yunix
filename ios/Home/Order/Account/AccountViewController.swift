@@ -19,7 +19,7 @@ class AccountViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "환불계좌"
         // Do any additional setup after loading the view.
     }
 

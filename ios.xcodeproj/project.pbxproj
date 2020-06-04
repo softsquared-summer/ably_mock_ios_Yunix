@@ -77,6 +77,18 @@
 		C356B5742482E98B003AC048 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C356B5732482E98B003AC048 /* RegisterDataManager.swift */; };
 		C356B57D24830D4B003AC048 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C356B57C24830D4B003AC048 /* LoginDataManager.swift */; };
 		C356B57F24830D5D003AC048 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C356B57E24830D5D003AC048 /* LoginResponse.swift */; };
+		C35BFA692488D0E5003CBD47 /* AfterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35BFA672488D0E5003CBD47 /* AfterLoginViewController.swift */; };
+		C35BFA6A2488D0E5003CBD47 /* AfterLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35BFA682488D0E5003CBD47 /* AfterLoginViewController.xib */; };
+		C35BFA6D2488D0F7003CBD47 /* BeforeLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35BFA6B2488D0F7003CBD47 /* BeforeLoginViewController.swift */; };
+		C35BFA6E2488D0F7003CBD47 /* BeforeLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35BFA6C2488D0F7003CBD47 /* BeforeLoginViewController.xib */; };
+		C35BFA722488DBF7003CBD47 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35BFA702488DBF7003CBD47 /* SettingViewController.swift */; };
+		C35BFA732488DBF7003CBD47 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35BFA712488DBF7003CBD47 /* SettingViewController.xib */; };
+		C35C66762488B75900ED97AD /* OrderListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C66752488B75900ED97AD /* OrderListResponse.swift */; };
+		C35C66782488B76500ED97AD /* OrderListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C66772488B76500ED97AD /* OrderListDataManager.swift */; };
+		C35C667B2488B77600ED97AD /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C66792488B77600ED97AD /* OrderListTableViewCell.swift */; };
+		C35C667C2488B77600ED97AD /* OrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35C667A2488B77600ED97AD /* OrderListTableViewCell.xib */; };
+		C35C667F2488B78F00ED97AD /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C667D2488B78F00ED97AD /* OrderListViewController.swift */; };
+		C35C66802488B78F00ED97AD /* OrderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35C667E2488B78F00ED97AD /* OrderListViewController.xib */; };
 		C36491C92484427B00DAB857 /* SecondOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36491C72484427B00DAB857 /* SecondOptionTableViewCell.swift */; };
 		C36491CA2484427B00DAB857 /* SecondOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36491C82484427B00DAB857 /* SecondOptionTableViewCell.xib */; };
 		C38745D424877106008FE998 /* FavoriteItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38745D224877106008FE998 /* FavoriteItemCollectionViewCell.swift */; };
@@ -193,6 +205,18 @@
 		C356B5732482E98B003AC048 /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
 		C356B57C24830D4B003AC048 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		C356B57E24830D5D003AC048 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		C35BFA672488D0E5003CBD47 /* AfterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginViewController.swift; sourceTree = "<group>"; };
+		C35BFA682488D0E5003CBD47 /* AfterLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterLoginViewController.xib; sourceTree = "<group>"; };
+		C35BFA6B2488D0F7003CBD47 /* BeforeLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeLoginViewController.swift; sourceTree = "<group>"; };
+		C35BFA6C2488D0F7003CBD47 /* BeforeLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforeLoginViewController.xib; sourceTree = "<group>"; };
+		C35BFA702488DBF7003CBD47 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C35BFA712488DBF7003CBD47 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		C35C66752488B75900ED97AD /* OrderListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListResponse.swift; sourceTree = "<group>"; };
+		C35C66772488B76500ED97AD /* OrderListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListDataManager.swift; sourceTree = "<group>"; };
+		C35C66792488B77600ED97AD /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
+		C35C667A2488B77600ED97AD /* OrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListTableViewCell.xib; sourceTree = "<group>"; };
+		C35C667D2488B78F00ED97AD /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		C35C667E2488B78F00ED97AD /* OrderListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListViewController.xib; sourceTree = "<group>"; };
 		C36491C72484427B00DAB857 /* SecondOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOptionTableViewCell.swift; sourceTree = "<group>"; };
 		C36491C82484427B00DAB857 /* SecondOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondOptionTableViewCell.xib; sourceTree = "<group>"; };
 		C38745D224877106008FE998 /* FavoriteItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -657,6 +681,71 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		C35BFA5F2488D098003CBD47 /* AfterLogin */ = {
+			isa = PBXGroup;
+			children = (
+				C35BFA6F2488DBDD003CBD47 /* Setting */,
+				C35BFA672488D0E5003CBD47 /* AfterLoginViewController.swift */,
+				C35BFA682488D0E5003CBD47 /* AfterLoginViewController.xib */,
+			);
+			path = AfterLogin;
+			sourceTree = "<group>";
+		};
+		C35BFA602488D0AF003CBD47 /* BeforeLogin */ = {
+			isa = PBXGroup;
+			children = (
+				C35BFA6B2488D0F7003CBD47 /* BeforeLoginViewController.swift */,
+				C35BFA6C2488D0F7003CBD47 /* BeforeLoginViewController.xib */,
+			);
+			path = BeforeLogin;
+			sourceTree = "<group>";
+		};
+		C35BFA6F2488DBDD003CBD47 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C35BFA702488DBF7003CBD47 /* SettingViewController.swift */,
+				C35BFA712488DBF7003CBD47 /* SettingViewController.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		C35C66712488B71300ED97AD /* OrderList */ = {
+			isa = PBXGroup;
+			children = (
+				C35C66742488B74200ED97AD /* Entity */,
+				C35C66732488B73200ED97AD /* DataManager */,
+				C35C66722488B72500ED97AD /* OrderListTableViewCell */,
+				C35C667D2488B78F00ED97AD /* OrderListViewController.swift */,
+				C35C667E2488B78F00ED97AD /* OrderListViewController.xib */,
+			);
+			path = OrderList;
+			sourceTree = "<group>";
+		};
+		C35C66722488B72500ED97AD /* OrderListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C35C66792488B77600ED97AD /* OrderListTableViewCell.swift */,
+				C35C667A2488B77600ED97AD /* OrderListTableViewCell.xib */,
+			);
+			path = OrderListTableViewCell;
+			sourceTree = "<group>";
+		};
+		C35C66732488B73200ED97AD /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C35C66772488B76500ED97AD /* OrderListDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		C35C66742488B74200ED97AD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C35C66752488B75900ED97AD /* OrderListResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		C36491C62484425600DAB857 /* SecondOptionTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,8 +902,11 @@
 		C3B8EAC2247D78DE003A56FD /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				C35C66712488B71300ED97AD /* OrderList */,
 				C356B5602482C874003AC048 /* Register */,
 				C356B5612482C881003AC048 /* Login */,
+				C35BFA5F2488D098003CBD47 /* AfterLogin */,
+				C35BFA602488D0AF003CBD47 /* BeforeLogin */,
 				C3B8EAC7247D7919003A56FD /* MyPageViewController.swift */,
 				C3B8EAC8247D7919003A56FD /* MyPageViewController.xib */,
 			);
@@ -926,16 +1018,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3541F7A248439530070149C /* SelectedSecondOptionViewController.xib in Resources */,
+				C35BFA732488DBF7003CBD47 /* SettingViewController.xib in Resources */,
+				C35BFA6E2488D0F7003CBD47 /* BeforeLoginViewController.xib in Resources */,
 				C3541F6D24841A700070149C /* SelectedFirstOptionViewController.xib in Resources */,
 				C356B5692482C8A3003AC048 /* LoginViewController.xib in Resources */,
 				C38745DB248799DD008FE998 /* LocationViewController.xib in Resources */,
 				C352EE0424826D4A00027E20 /* ProductInfoViewController.xib in Resources */,
 				C3541F7224841C2B0070149C /* FirstOptionTableViewCell.xib in Resources */,
 				C3B8EAD8247D7EF8003A56FD /* StyleViewController.xib in Resources */,
+				C35BFA6A2488D0E5003CBD47 /* AfterLoginViewController.xib in Resources */,
 				C38745DF248799E9008FE998 /* AccountViewController.xib in Resources */,
 				BDEF323C22F9B7CB00FEF8BD /* LaunchScreen.storyboard in Resources */,
 				BDEF323922F9B7CB00FEF8BD /* Assets.xcassets in Resources */,
 				C3AD262D2481345F0053EB85 /* TodayViewController.xib in Resources */,
+				C35C667C2488B77600ED97AD /* OrderListTableViewCell.xib in Resources */,
 				C3541F5824838C250070149C /* ProductOption.storyboard in Resources */,
 				C3541F602483E1C80070149C /* FirstOptionViewController.xib in Resources */,
 				C3AD264C248161860053EB85 /* BestViewController.xib in Resources */,
@@ -947,6 +1043,7 @@
 				C305A1622486865C00A3B1BA /* OrderViewController.xib in Resources */,
 				C3534EF22486D36E00C1ED81 /* MarketTableViewCell.xib in Resources */,
 				C3AD2642248150410053EB85 /* TodayCollectionViewCell.xib in Resources */,
+				C35C66802488B78F00ED97AD /* OrderListViewController.xib in Resources */,
 				C328252F247E1E3C004985EC /* FavoriteMarketViewController.xib in Resources */,
 				C3AD263D248134DA0053EB85 /* HotDealViewController.xib in Resources */,
 				C3B8EAD4247D7EEA003A56FD /* HomeViewController.xib in Resources */,
@@ -1016,13 +1113,17 @@
 				C38745F22487F078008FE998 /* DrawersDataManager.swift in Sources */,
 				C36491C92484427B00DAB857 /* SecondOptionTableViewCell.swift in Sources */,
 				C356B5682482C8A3003AC048 /* LoginViewController.swift in Sources */,
+				C35C667F2488B78F00ED97AD /* OrderListViewController.swift in Sources */,
 				C3534EE22486969B00C1ED81 /* AutoLoginDataManager.swift in Sources */,
 				C3534EE4248696B100C1ED81 /* AutoLoginResponse.swift in Sources */,
 				C3AD264B248161860053EB85 /* BestViewController.swift in Sources */,
+				C35C667B2488B77600ED97AD /* OrderListTableViewCell.swift in Sources */,
 				C356B57F24830D5D003AC048 /* LoginResponse.swift in Sources */,
 				C328252A247E1E30004985EC /* FavoriteItemViewController.swift in Sources */,
 				C33F69B8248814D700E5894E /* DeleteDrawersResponse.swift in Sources */,
+				C35C66762488B75900ED97AD /* OrderListResponse.swift in Sources */,
 				C3541F5F2483E1C80070149C /* FirstOptionViewController.swift in Sources */,
+				C35C66782488B76500ED97AD /* OrderListDataManager.swift in Sources */,
 				C38745FB24880310008FE998 /* AddDrawersDataManager.swift in Sources */,
 				C33F69C8248821EC00E5894E /* FavoriteItemInfoResponse.swift in Sources */,
 				C356B5742482E98B003AC048 /* RegisterDataManager.swift in Sources */,
@@ -1034,6 +1135,7 @@
 				C3541F642483E3CE0070149C /* SelectedProductTableViewCell.swift in Sources */,
 				C3539339247D82E900BA4443 /* TapBarController.swift in Sources */,
 				C352EE0324826D4A00027E20 /* ProductInfoViewController.swift in Sources */,
+				C35BFA692488D0E5003CBD47 /* AfterLoginViewController.swift in Sources */,
 				C328252E247E1E3C004985EC /* FavoriteMarketViewController.swift in Sources */,
 				BDEF323722F9B7CB00FEF8BD /* ios.xcdatamodeld in Sources */,
 				C3534EF82486E4AA00C1ED81 /* NewBestDataManager.swift in Sources */,
@@ -1043,6 +1145,7 @@
 				C352EE0A24826D9D00027E20 /* ProductInfoDataManager.swift in Sources */,
 				C3AD2648248159E60053EB85 /* TodayDataManager.swift in Sources */,
 				BD9BF17822F9C6CF009E47EB /* UIColor.swift in Sources */,
+				C35BFA722488DBF7003CBD47 /* SettingViewController.swift in Sources */,
 				C3B8EAD3247D7EEA003A56FD /* HomeViewController.swift in Sources */,
 				BD9BF18022F9CDEF009E47EB /* String.swift in Sources */,
 				C38745F72487FDB2008FE998 /* AddDrawerViewController.swift in Sources */,
@@ -1072,6 +1175,7 @@
 				BD9BF17A22F9C6FF009E47EB /* UIButton.swift in Sources */,
 				C38745DA248799DD008FE998 /* LocationViewController.swift in Sources */,
 				C3B8EAD7247D7EF8003A56FD /* StyleViewController.swift in Sources */,
+				C35BFA6D2488D0F7003CBD47 /* BeforeLoginViewController.swift in Sources */,
 				C3541F52248389110070149C /* ProductOptionResponse.swift in Sources */,
 				C33F69BA2488154600E5894E /* DeleteDataManager.swift in Sources */,
 				C38745E32487CA56008FE998 /* OrderResponse.swift in Sources */,

@@ -21,7 +21,7 @@ class LocationViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "배송지 입력"
         // Do any additional setup after loading the view.
     }
 

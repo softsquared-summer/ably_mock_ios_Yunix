@@ -10,7 +10,6 @@ import UIKit
 import PMSuperButton
 
 class MyPageViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,15 +17,18 @@ class MyPageViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-    }
-
-    @IBAction func pressedLogin(_ sender: PMSuperButton) {
-        
-        self.navigationController?.pushViewController(LoginViewController(), animated: true)
-    }
-    
-    @IBAction func pressedRegister(_ sender: PMSuperButton) {
-        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        if userToken == nil {
+            let nextViewController = BeforeLoginViewController()
+            nextViewController.view.frame = view.bounds
+            addChild(nextViewController)
+            view.addSubview(nextViewController.view)
+        } else {
+            let nextViewController = AfterLoginViewController()
+            nextViewController.view.frame = view.bounds
+            addChild(nextViewController)
+            view.addSubview(nextViewController.view)
+        }
     }
     /*
     // MARK: - Navigation

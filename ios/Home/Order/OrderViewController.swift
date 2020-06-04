@@ -31,6 +31,9 @@ class OrderViewController: UIViewController {
     var productInfo: [[String : Int]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .black
+        self.navigationItem.title = "주문/결제"
         // Do any additional setup after loading the view.
         totalPriceLabel.text = price
         totalCountLabel.text = count
@@ -42,6 +45,9 @@ class OrderViewController: UIViewController {
         accountViewController.rootViewController = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     func doneItem(data: [Int : [String]]!, price: String!, count: String!, result: [ProductOptionResponseResult]!, index: Int!) {
         itemData = data
         self.price = price

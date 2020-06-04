@@ -147,7 +147,7 @@ class FavoriteItemViewController: UIViewController {
 extension FavoriteItemViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if data.count == 0 {
-            return 10
+            return 1
         } else {
             return data.count
         }

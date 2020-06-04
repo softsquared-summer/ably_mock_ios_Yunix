@@ -18,12 +18,14 @@ class MarketTableViewCell: UITableViewCell {
     @IBOutlet var firstSubImageView: UIImageView!
     @IBOutlet var secondSubImageView: UIImageView!
     @IBOutlet var intenLabel: UILabel!
+    @IBOutlet var imagesView: UIView!
     
     static let identifier = "MarketTableViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        imagesView?.layer.cornerRadius = 5
+        imagesView.clipsToBounds = true
         mainImageView.kf.setImage(with: URL(string: imageList.randomElement()!))
         firstSubImageView.kf.setImage(with: URL(string: imageList.randomElement()!))
         secondSubImageView.kf.setImage(with: URL(string: imageList.randomElement()!))

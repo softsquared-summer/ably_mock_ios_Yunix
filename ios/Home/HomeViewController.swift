@@ -47,13 +47,29 @@ class HomeViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if !todayViewController.isNavigationBar {
+            navigationController?.navigationBar.isHidden = true
+        } else {
+            navigationController!.navigationBar.frame = CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: 160.0)
+        }
+        
+        if (userName == nil) {
+            todayViewController.userNameLabel.text = "회원"
+        } else {
+            todayViewController.userNameLabel.text = userName
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+            navigationController?.navigationBar.isHidden = false
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black.withAlphaComponent(1)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
-        self.navigationController!.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 160.0)
     }
     /*
     // MARK: - Navigation
@@ -116,6 +132,7 @@ extension HomeViewController: SwipeMenuViewDelegate, SwipeMenuViewDataSource {
         if currentIndex == 0 {
             todayViewController.rootViewController = self
             TodayDataManager().getRecommendedProduct(todayViewController, 1)
+            
         }
     }
 }

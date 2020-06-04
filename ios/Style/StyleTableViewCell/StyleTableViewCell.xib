@@ -17,22 +17,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qug-K6-f3X" customClass="PMSuperButton" customModule="PMSuperButton">
+                        <rect key="frame" x="15" y="10" width="290" height="287"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksU-jG-zal" customClass="PMSuperButton" customModule="PMSuperButton">
                         <rect key="frame" x="15" y="10" width="290" height="287"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3e-Yz-YbT">
-                                <rect key="frame" x="0.0" y="0.0" width="290" height="185"/>
+                                <rect key="frame" x="0.0" y="0.0" width="290" height="175"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywm-lu-eoz">
-                                <rect key="frame" x="0.0" y="175" width="290" height="102"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsT-ph-Wr4">
                                 <rect key="frame" x="15" y="195.5" width="34" height="15"/>
                                 <constraints>
@@ -60,9 +72,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="M3S-dI-fFe" secondAttribute="bottom" constant="25" id="0vE-BJ-Eo9"/>
                             <constraint firstItem="RC7-oh-SW5" firstAttribute="leading" secondItem="EsT-ph-Wr4" secondAttribute="trailing" constant="8" id="53u-qW-W8Y"/>
-                            <constraint firstItem="ywm-lu-eoz" firstAttribute="top" secondItem="y3e-Yz-YbT" secondAttribute="bottom" constant="-10" id="5oL-Ge-Bnd"/>
                             <constraint firstItem="M3S-dI-fFe" firstAttribute="top" secondItem="RC7-oh-SW5" secondAttribute="bottom" constant="10" id="6yT-38-3q9"/>
-                            <constraint firstItem="ywm-lu-eoz" firstAttribute="leading" secondItem="ksU-jG-zal" secondAttribute="leading" id="A5t-Fd-t8o"/>
                             <constraint firstAttribute="trailing" secondItem="y3e-Yz-YbT" secondAttribute="trailing" id="IeX-eY-O2A"/>
                             <constraint firstItem="M3S-dI-fFe" firstAttribute="leading" secondItem="ksU-jG-zal" secondAttribute="leading" constant="15" id="Lwx-uE-ikk"/>
                             <constraint firstItem="y3e-Yz-YbT" firstAttribute="leading" secondItem="ksU-jG-zal" secondAttribute="leading" id="NqB-Ds-L2y"/>
@@ -70,9 +80,7 @@
                             <constraint firstItem="EsT-ph-Wr4" firstAttribute="leading" secondItem="ksU-jG-zal" secondAttribute="leading" constant="15" id="bID-4I-Lrb"/>
                             <constraint firstItem="y3e-Yz-YbT" firstAttribute="top" secondItem="ksU-jG-zal" secondAttribute="top" id="bgh-IV-rxT"/>
                             <constraint firstAttribute="trailing" secondItem="M3S-dI-fFe" secondAttribute="trailing" constant="15" id="h3X-LK-Tkg"/>
-                            <constraint firstAttribute="trailing" secondItem="ywm-lu-eoz" secondAttribute="trailing" id="pBs-F2-NGz"/>
-                            <constraint firstItem="RC7-oh-SW5" firstAttribute="top" secondItem="y3e-Yz-YbT" secondAttribute="bottom" constant="10" id="paq-59-ztZ"/>
-                            <constraint firstAttribute="bottom" secondItem="ywm-lu-eoz" secondAttribute="bottom" constant="10" id="wFO-lY-BCh"/>
+                            <constraint firstItem="RC7-oh-SW5" firstAttribute="top" secondItem="y3e-Yz-YbT" secondAttribute="bottom" constant="20" id="paq-59-ztZ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -94,9 +102,13 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Qug-K6-f3X" firstAttribute="width" secondItem="ksU-jG-zal" secondAttribute="width" id="7Gf-3z-cEB"/>
                     <constraint firstItem="ksU-jG-zal" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8o1-GD-f93"/>
                     <constraint firstAttribute="trailing" secondItem="ksU-jG-zal" secondAttribute="trailing" constant="15" id="Crb-i3-R80"/>
+                    <constraint firstItem="Qug-K6-f3X" firstAttribute="centerY" secondItem="ksU-jG-zal" secondAttribute="centerY" id="Idv-QG-55R"/>
+                    <constraint firstItem="Qug-K6-f3X" firstAttribute="height" secondItem="ksU-jG-zal" secondAttribute="height" id="K6k-A5-MWE"/>
                     <constraint firstAttribute="bottom" secondItem="ksU-jG-zal" secondAttribute="bottom" constant="15" id="Ys8-qQ-RY8"/>
+                    <constraint firstItem="Qug-K6-f3X" firstAttribute="centerX" secondItem="ksU-jG-zal" secondAttribute="centerX" id="cUY-Wb-cHt"/>
                     <constraint firstItem="ksU-jG-zal" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tjw-So-qDz"/>
                 </constraints>
             </tableViewCellContentView>
@@ -106,6 +118,7 @@
                 <outlet property="contentLabel" destination="M3S-dI-fFe" id="OU8-jn-Uez"/>
                 <outlet property="name" destination="RC7-oh-SW5" id="2Sa-Uu-yzH"/>
                 <outlet property="newLabel" destination="EsT-ph-Wr4" id="xrP-kW-aXg"/>
+                <outlet property="superButton" destination="ksU-jG-zal" id="JOe-g9-LBC"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="237.72321428571428"/>
         </tableViewCell>

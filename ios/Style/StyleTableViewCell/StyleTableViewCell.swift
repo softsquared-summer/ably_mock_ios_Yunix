@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PMSuperButton
 
 class StyleTableViewCell: UITableViewCell {
 
@@ -14,12 +15,14 @@ class StyleTableViewCell: UITableViewCell {
     @IBOutlet var newLabel: UILabel!
     @IBOutlet var name: UILabel!
     @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var superButton: PMSuperButton!
     
     static let identifier = "StyleTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        superButton.clipsToBounds = true
         newLabel.layer.borderWidth = 1
         newLabel.layer.cornerRadius = 7.5
         newLabel.layer.borderColor = UIColor(hex: 0xFE5160, alpha: 0.5).cgColor

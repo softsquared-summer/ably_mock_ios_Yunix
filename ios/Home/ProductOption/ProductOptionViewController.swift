@@ -67,10 +67,13 @@ class ProductOptionViewController: UIViewController {
     }
     
     @IBAction func pressedPurchase(_ sender: Any) {
+        rootViewController.navigationController!.navigationBar.frame = CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: 160.0)
+        rootViewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        rootViewController.navigationItem.backBarButtonItem?.tintColor = .black
+        
         let nextViewController = OrderViewController()
         nextViewController.doneItem(data: itemList, price: itemPrice.text, count: itemCount.text, result: self.result, index: self.currentIndex)
         self.dismiss(animated: false, completion: nil)
-        rootViewController.navigationController?.setNavigationBarHidden(false, animated: false)
         rootViewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
