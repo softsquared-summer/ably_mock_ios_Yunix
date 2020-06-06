@@ -29,10 +29,12 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func pressedRegisterWithEmail(_ sender: Any) {
+        navigationController?.navigationBar.isHidden = false
         self.navigationController?.pushViewController(InputUserInfoViewController(), animated: true)
     }
     
     @IBAction func pressedLoginWithEmail(_ sender: Any) {
+        navigationController?.navigationBar.isHidden = false
         self.navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     

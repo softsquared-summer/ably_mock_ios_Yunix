@@ -26,7 +26,7 @@ class HomeViewController: BaseViewController {
         
        menuView.dataSource = self
        menuView.delegate = self
-
+        
        var options = menuView.options
 
        options.tabView.height = 40
